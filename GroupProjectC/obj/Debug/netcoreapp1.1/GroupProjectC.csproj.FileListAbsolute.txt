@@ -1,0 +1,8 @@
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.deps.json
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.runtimeconfig.json
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.runtimeconfig.dev.json
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.AssemblyInfo.cs
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.dll
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.pdb
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.dll
+/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.pdb

@@ -1,0 +1,17 @@
+/* For testing only */
+
+*:not(body):not(html), *{
+  box-sizing:border-box;
+  border:1px dashed #000;
+}
+
+/* End for testing */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+}

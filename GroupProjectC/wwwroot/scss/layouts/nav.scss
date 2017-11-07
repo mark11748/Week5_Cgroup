@@ -17,27 +17,3 @@ nav li {
 .fa {
   font-size: 30px;
 }
-
-@media screen and(max-width: 700px) {
-
-  nav ul {
-    display: none;
-  }
-
-  .fa-bars {
-    display: block;
-    margin-bottom: 80px;
-  }
-
-  nav:hover ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav:hover .fa-bars {
-    margin-bottom: 0px;
-  }
-
-}

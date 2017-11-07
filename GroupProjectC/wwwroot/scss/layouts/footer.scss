@@ -1,12 +1,10 @@
-// footer {
-//   position: sticky;
-//   display: flex;
-//   justify-content: flex-start;
-//   width: 100%;
-// }
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
 
 .footer-column {
-  bottom: 0;
   width: 50%;
   overflow: hidden;
 }
@@ -18,4 +16,7 @@
 
 .last ul {
   list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: flex-start;
 }

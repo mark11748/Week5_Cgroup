@@ -12,5 +12,11 @@ namespace GroupProjectC.Controllers
       {
         return View();
       }
+
+      [HttpGet("/game")]
+      public ActionResult Game()
+      {
+        return View();
+      }
     }
 }

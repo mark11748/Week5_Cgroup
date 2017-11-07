@@ -1,0 +1,22 @@
+// footer {
+//   position: sticky;
+//   display: flex;
+//   justify-content: flex-start;
+//   width: 100%;
+// }
+
+.footer-column {
+  position: sticky;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+.last {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.last ul {
+  list-style: none;
+}

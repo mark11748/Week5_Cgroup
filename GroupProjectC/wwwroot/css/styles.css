@@ -1,40 +1,56 @@
+@font-face {
+  font-family: 'Fink-Roman';
+  src: url("../fonts/FinkBold.ttf"); }
 /* For testing only */
-*:not(body):not(html), * {
-  box-sizing: border-box;
-  border: 1px dashed #000; }
-
 /* End for testing */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0; }
 
 body, html {
-  height: 100%; }
-
-.hero {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap; }
+  background-color: rgba(183, 195, 210, 0.6);
+  color: #fdfeff; }
 
-.banner-text {
-  width: 100%;
-  height: 100px;
-  margin: 160px 0 0 0;
-  display: flex;
-  justify-content: center; }
+h1, h2, h3 {
+  font-family: 'Fink-Roman';
+  color: #C2192E; }
 
-.play-banner {
-  text-align: center;
-  width: 40%;
-  height: 10vh;
-  margin: 10px; }
+h2 {
+  font-size: 40px; }
 
-.instruction-link {
-  width: 100%;
+a {
+  color: white; }
+
+a:hover {
+  color: #677585; }
+
+.container {
+  padding: 30px; }
+
+.footer-column {
+  position: sticky;
+  bottom: 0;
+  width: 50%;
+  overflow: hidden; }
+
+.last {
   display: flex;
-  justify-content: center;
-  height: 10vh; }
+  justify-content: flex-end; }
+
+.last ul {
+  list-style: none; }
+
+.instruction-link:hover .instructions {
+  display: block;
+  width: 100%; }
+
+.instruction-link:hover {
+  display: block;
+  text-align: center; }
+
+.instructions {
+  display: none; }
 
 nav ul {
   list-style: none;
@@ -48,14 +64,10 @@ nav li {
 .fa-bars {
   display: none; }
 
+.fa {
+  font-size: 30px; }
+
 @media screen and (max-width: 700px) {
-  .banner-text {
-    margin: 0; }
-
-  .play-banner, .instruction-link {
-    width: 100%;
-    height: 10vh; }
-
   nav ul {
     display: none; }
 
@@ -71,5 +83,57 @@ nav li {
 
   nav:hover .fa-bars {
     margin-bottom: 0px; } }
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.banner-text {
+  width: 100%;
+  height: 400px;
+  margin: 100px 0 0 0;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/spash_title.png");
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.play-banner a {
+  display: flex;
+  justify-content: center; }
+
+.play-banner img {
+  position: relative;
+  height: 35vh; }
+
+.play-banner h2 {
+  position: absolute;
+  align-self: center;
+  width: 20vw;
+  z-index: 1; }
+
+.play-banner {
+  text-align: center;
+  width: 40vw;
+  height: auto;
+  flex-wrap: wrap; }
+
+.instruction-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 10vh; }
+
+@media screen and (max-width: 700px) {
+  .banner-text {
+    margin: 0; }
+
+  .play-banner, .instruction-link {
+    height: auto; }
+
+  .play-banner img {
+    width: 30vw;
+    height: 30vw; } }
 
 /*# sourceMappingURL=styles.css.map */

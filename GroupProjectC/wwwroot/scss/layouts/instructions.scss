@@ -1,0 +1,13 @@
+.instruction-link:hover .instructions {
+  display: block;
+  width: 100%;
+}
+//
+.instruction-link:hover {
+  display: block;
+  text-align: center;
+}
+
+.instructions {
+  display: none;
+}

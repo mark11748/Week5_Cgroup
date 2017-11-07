@@ -1,6 +1,28 @@
 @font-face {
   font-family: 'Fink-Roman';
   src: url("../fonts/FinkBold.ttf"); }
+@media screen and (max-width: 700px) {
+  .banner-text {
+    margin: 0; }
+
+  .play-banner, .instruction-link {
+    height: auto; }
+
+  nav ul {
+    display: none; }
+
+  .fa-bars {
+    display: block;
+    margin-bottom: 80px; }
+
+  nav:hover ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+
+  nav:hover .fa-bars {
+    margin-bottom: 0px; } }
 /* For testing only */
 /* End for testing */
 *, *::before, *::after {
@@ -27,8 +49,12 @@ a:hover {
 .container {
   padding: 30px; }
 
+.footer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%; }
+
 .footer-column {
-  bottom: 0;
   width: 50%;
   overflow: hidden; }
 
@@ -37,7 +63,10 @@ a:hover {
   justify-content: flex-end; }
 
 .last ul {
-  list-style: none; }
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: flex-start; }
 
 .instruction-link:hover .instructions {
   display: block;
@@ -48,7 +77,17 @@ a:hover {
   text-align: center; }
 
 .instructions {
-  display: none; }
+  display: none;
+  height: 40vh;
+  border: 3px solid #677585; }
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start; }
+
+.instructions img {
+  width: 30%; }
 
 nav ul {
   list-style: none;
@@ -65,22 +104,6 @@ nav li {
 .fa {
   font-size: 30px; }
 
-@media screen and (max-width: 700px) {
-  nav ul {
-    display: none; }
-
-  .fa-bars {
-    display: block;
-    margin-bottom: 80px; }
-
-  nav:hover ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0; }
-
-  nav:hover .fa-bars {
-    margin-bottom: 0px; } }
 .hero {
   height: 100%;
   display: flex;
@@ -90,7 +113,7 @@ nav li {
 .banner-text {
   width: 100%;
   height: 400px;
-  margin: 100px 0 0 0;
+  margin: 30px 0 0 0;
   display: flex;
   justify-content: center;
   background-image: url("../img/spash_title.png");
@@ -103,7 +126,8 @@ nav li {
 
 .play-banner img {
   position: relative;
-  height: 35vh; }
+  width: 40vw;
+  height: 40%; }
 
 .play-banner h2 {
   position: absolute;
@@ -113,7 +137,6 @@ nav li {
 
 .play-banner {
   text-align: center;
-  width: 40vw;
   height: auto;
   flex-wrap: wrap; }
 
@@ -121,17 +144,6 @@ nav li {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 10vh; }
-
-@media screen and (max-width: 700px) {
-  .banner-text {
-    margin: 0; }
-
-  .play-banner, .instruction-link {
-    height: auto; }
-
-  .play-banner img {
-    width: 30vw;
-    height: 30vw; } }
+  height: auto; }
 
 /*# sourceMappingURL=styles.css.map */

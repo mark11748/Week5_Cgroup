@@ -62,7 +62,7 @@ a:hover {
 .instructions {
   display: none;
   height: 20vh;
-  border: 4px solid #677585; }
+  border: 6px solid #677585; }
 
 .instructions-body {
   align-items: center;
@@ -126,7 +126,7 @@ nav li {
   background-image: url("../img/spash_title.png");
   background-repeat: no-repeat;
   background-position: center;
-  border: 4px solid #677585; }
+  border: 6px solid #677585; }
 
 .play-banner a {
   display: flex;
@@ -157,8 +157,158 @@ nav li {
   justify-content: center;
   height: auto; }
 
+.left {
+  width: 20%;
+  display: flex;
+  align-items: stretch; }
+
+.half-hero {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start; }
+
+.side-box {
+  width: 100%; }
+
+.side-box a {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.side-box img {
+  width: 90%;
+  position: relative; }
+
+.side-box h3 {
+  position: absolute;
+  align-self: center;
+  z-index: 1;
+  font-size: 4vw;
+  text-align: center;
+  width: 10vw;
+  margin: -10px 0 0 -15px; }
+
+.game-area {
+  max-width: 800px;
+  width: 65vw;
+  max-height: 400px;
+  height: 40vh;
+  border: 6px solid #677585; }
+
 @media screen and (max-width: 900px) {
   .play-banner h2 {
-    font-size: 5vw; } }
+    font-size: 5vw; }
+
+  .side-box h3 {
+    margin: -5px 0 0 -5px; } }
+.game-grid {
+  display: grid;
+  grid-template-columns: none;
+  grid-gap: 0px;
+  grid-auto-rows: minmax(100px, auto);
+  border: 6px solid #677585; }
+
+.game-grid > div {
+  border: 1px solid black; }
+
+.one {
+  grid-column: 0.2;
+  grid-row: 0.2; }
+
+.two {
+  grid-column: 0.4;
+  grid-row: 0.2; }
+
+.three {
+  grid-column: 0.6;
+  grid-row: 0.2; }
+
+.four {
+  grid-column: 0.8;
+  grid-row: 0.2; }
+
+.five {
+  grid-column: 1;
+  grid-row: 0.2; }
+
+.six {
+  grid-column: 0.2;
+  grid-row: 0.4; }
+
+.seven {
+  grid-column: 0.4;
+  grid-row: 0.4; }
+
+.eight {
+  grid-column: 0.6;
+  grid-row: 0.4; }
+
+.nine {
+  grid-column: 0.8;
+  grid-row: 0.4; }
+
+.ten {
+  grid-column: 1;
+  grid-row: 0.4; }
+
+.eleven {
+  grid-column: 0.2;
+  grid-row: 0.6; }
+
+.twelve {
+  grid-column: 0.4;
+  grid-row: 0.6; }
+
+.thirteen {
+  grid-column: 0.6;
+  grid-row: 0.6; }
+
+.fourteen {
+  grid-column: 0.8;
+  grid-row: 0.6; }
+
+.fifteen {
+  grid-column: 1;
+  grid-row: 0.6; }
+
+.sixteen {
+  grid-column: 0.2;
+  grid-row: 0.8; }
+
+.seventeen {
+  grid-column: 0.4;
+  grid-row: 0.8; }
+
+.eighteen {
+  grid-column: 0.6;
+  grid-row: 0.8; }
+
+.nineteen {
+  grid-column: 0.8;
+  grid-row: 0.8; }
+
+.twenty {
+  grid-column: 1;
+  grid-row: 0.8; }
+
+.twenty-one {
+  grid-column: 0.2;
+  grid-row: 1; }
+
+.twenty-two {
+  grid-column: 0.4;
+  grid-row: 1; }
+
+.twenty-three {
+  grid-column: 0.6;
+  grid-row: 1; }
+
+.twenty-four {
+  grid-column: 0.8;
+  grid-row: 1; }
+
+.twenty-five {
+  grid-column: 1;
+  grid-row: 1; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -6,25 +6,28 @@
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
+
 }
 
-$body-color: rgba(183,195,210, 0.6);
-$text-color: rgba(253, 254, 255, 1);
-$darker-blue: rgba(103,117,133, 1);
-$red-text: #C2192E;
+
 
 body, html {
-  background-color: $body-color;
   color: $text-color;
+  background-color: $body-color;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: 'Fink-Roman';
+  font-family: 'Love Ya Like A Sister', cursive;
   color: $red-text;
 }
 
 h2 {
   font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
 }
 
 a {
@@ -36,5 +39,6 @@ a:hover {
 }
 
 .container {
-  padding: 30px;
+  padding: 30px 30px 0 30px;
+  height: auto;
 }

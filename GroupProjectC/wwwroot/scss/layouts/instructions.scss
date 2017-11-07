@@ -6,12 +6,13 @@
 .instruction-link:hover {
   display: block;
   text-align: center;
+  margin: 0 0 0 0;
 }
 
 .instructions {
   display: none;
-  height: 40vh;
-  border: 3px solid $darker-blue;
+  height: 20vh;
+  border: $border-style;
 }
 
 .instructions-body {
@@ -21,4 +22,8 @@
 }
 .instructions img {
   width: 30%;
+}
+
+.instruction-link {
+  margin: 0 0 20vh 0;
 }

@@ -1,12 +1,10 @@
 .footer {
   display: flex;
-  justify-content: flex-start;
   width: 100%;
 }
 
 .footer-column {
   width: 50%;
-  overflow: hidden;
 }
 
 .last {
@@ -18,5 +16,5 @@
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }

@@ -3,41 +3,11 @@ $text-color: rgba(253, 254, 255, 1);
 $darker-blue: rgba(103,117,133, 1);
 $red-text: #C2192E;
 
+$border-style: 4px solid $darker-blue;
+
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700');
+
 @font-face {
   font-family: 'Fink-Roman';
   src: url('../fonts/FinkBold.ttf');
-}
-
-
-@media screen and(max-width: 700px) {
-
-  .banner-text {
-    margin: 0
-  }
-
-  .play-banner, .instruction-link {
-    // width: 100%;
-    height: auto;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .fa-bars {
-    display: block;
-    margin-bottom: 80px;
-  }
-
-  nav:hover ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-  }
-
-  nav:hover .fa-bars {
-    margin-bottom: 0px;
-  }
-
 }

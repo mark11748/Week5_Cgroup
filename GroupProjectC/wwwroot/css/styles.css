@@ -1,6 +1,95 @@
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700");
 @font-face {
   font-family: 'Fink-Roman';
   src: url("../fonts/FinkBold.ttf"); }
+/* For testing only */
+/* End for testing */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0; }
+
+body, html {
+  color: #fdfeff;
+  background-color: rgba(183, 195, 210, 0.6);
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  color: #C2192E; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 35px; }
+
+a {
+  color: white; }
+
+a:hover {
+  color: #677585; }
+
+.container {
+  padding: 30px 30px 0 30px;
+  height: auto; }
+
+.footer {
+  display: flex;
+  width: 100%; }
+
+.footer-column {
+  width: 50%; }
+
+.last {
+  display: flex;
+  justify-content: flex-end; }
+
+.last ul {
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: flex-end; }
+
+.instruction-link:hover .instructions {
+  display: block;
+  width: 100%; }
+
+.instruction-link:hover {
+  display: block;
+  text-align: center;
+  margin: 0 0 0 0; }
+
+.instructions {
+  display: none;
+  height: 20vh;
+  border: 4px solid #677585; }
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start; }
+
+.instructions img {
+  width: 30%; }
+
+.instruction-link {
+  margin: 0 0 20vh 0; }
+
+nav ul {
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: flex-start; }
+
+nav li {
+  margin: 10px; }
+
+.fa-bars {
+  display: none; }
+
+.fa {
+  font-size: 30px; }
+
 @media screen and (max-width: 700px) {
   .banner-text {
     margin: 0; }
@@ -23,102 +112,21 @@
 
   nav:hover .fa-bars {
     margin-bottom: 0px; } }
-/* For testing only */
-/* End for testing */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0; }
-
-body, html {
-  background-color: rgba(183, 195, 210, 0.6);
-  color: #fdfeff; }
-
-h1, h2, h3 {
-  font-family: 'Fink-Roman';
-  color: #C2192E; }
-
-h2 {
-  font-size: 40px; }
-
-a {
-  color: white; }
-
-a:hover {
-  color: #677585; }
-
-.container {
-  padding: 30px; }
-
-.footer {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%; }
-
-.footer-column {
-  width: 50%;
-  overflow: hidden; }
-
-.last {
-  display: flex;
-  justify-content: flex-end; }
-
-.last ul {
-  list-style: none;
-  display: inline;
-  display: flex;
-  justify-content: flex-start; }
-
-.instruction-link:hover .instructions {
-  display: block;
-  width: 100%; }
-
-.instruction-link:hover {
-  display: block;
-  text-align: center; }
-
-.instructions {
-  display: none;
-  height: 40vh;
-  border: 3px solid #677585; }
-
-.instructions-body {
-  align-items: center;
-  display: flex;
-  justify-content: flex-start; }
-
-.instructions img {
-  width: 30%; }
-
-nav ul {
-  list-style: none;
-  display: inline;
-  display: flex;
-  justify-content: flex-start; }
-
-nav li {
-  margin: 10px; }
-
-.fa-bars {
-  display: none; }
-
-.fa {
-  font-size: 30px; }
-
 .hero {
-  height: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
 
 .banner-text {
-  width: 100%;
+  width: 800px;
   height: 400px;
-  margin: 30px 0 0 0;
+  margin: 0 10% 0 10%;
   display: flex;
   justify-content: center;
   background-image: url("../img/spash_title.png");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  border: 4px solid #677585; }
 
 .play-banner a {
   display: flex;
@@ -133,7 +141,10 @@ nav li {
   position: absolute;
   align-self: center;
   width: 20vw;
-  z-index: 1; }
+  z-index: 1;
+  font-size: 3em;
+  margin: -15px 0 0 -15px;
+  text-align: center; }
 
 .play-banner {
   text-align: center;
@@ -145,5 +156,9 @@ nav li {
   display: flex;
   justify-content: center;
   height: auto; }
+
+@media screen and (max-width: 900px) {
+  .play-banner h2 {
+    font-size: 5vw; } }
 
 /*# sourceMappingURL=styles.css.map */

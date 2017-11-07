@@ -8,7 +8,6 @@
   margin: 0; }
 
 body, html {
-  height: 100%;
   background-color: rgba(183, 195, 210, 0.6);
   color: #fdfeff; }
 
@@ -29,7 +28,6 @@ a:hover {
   padding: 30px; }
 
 .footer-column {
-  position: sticky;
   bottom: 0;
   width: 50%;
   overflow: hidden; }

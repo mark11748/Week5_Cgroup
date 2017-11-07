@@ -10,6 +10,15 @@
 
 .instructions {
   display: none;
-  height: 30vh;
+  height: 40vh;
   border: 3px solid $darker-blue;
+}
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+.instructions img {
+  width: 30%;
 }

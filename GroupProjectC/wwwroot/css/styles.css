@@ -78,8 +78,16 @@ a:hover {
 
 .instructions {
   display: none;
-  height: 30vh;
+  height: 40vh;
   border: 3px solid #677585; }
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start; }
+
+.instructions img {
+  width: 30%; }
 
 nav ul {
   list-style: none;

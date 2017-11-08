@@ -9655,16 +9655,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/GroupProjectC.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/GroupProjectC.csproj",
       "projectName": "GroupProjectC",
-      "projectPath": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/GroupProjectC.csproj",
-      "outputPath": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/obj/",
+      "projectPath": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/GroupProjectC.csproj",
+      "outputPath": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/obj/",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/GroupProjectC.dll": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/bin/placeholder/netcoreapp1.1/GroupProjectC.dll"
+        "lib/netcoreapp1.1/GroupProjectC.dll": "/Users/Guest/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/bin/placeholder/netcoreapp1.1/GroupProjectC.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

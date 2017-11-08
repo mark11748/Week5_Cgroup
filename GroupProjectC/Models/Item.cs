@@ -10,17 +10,21 @@ namespace GroupProjectC.Models
     private string _description;
     private int    _posX;
     private int    _posY;
+    private int    _ownedBy; //0=none, 1=player, 2=cell
+    private object _owner;   //this is either the cell it is in or a reference to the player atm
+
     // private int?   _lockId;     //optional property
     // private bool   _hidden;
-    private object _owner; //this is either the room it is in or a reference to the player
     //For defining specific items <-- may be redundant since cell constructor already has items property, which is an empty array
     //item types:0=key item, 1=sensor
+
     public Item (string name = "UNSET", string description = "PLACEHOLDER_ITEM_DESC", int posX = 0, int posY = 0)
     {
       this.SetName     (name);
       this.SetDescript (description);
       this.SetX     (posX);
       this.SetY     (posY);
+      this._ownedBy = 0;
     }
     public string GetName()            {return this._name;}
     public void   SetName(string name) {this._name=name;}
@@ -34,14 +38,24 @@ namespace GroupProjectC.Models
 
     public object GetOwner()
     {
-      if (this._owner is Locale) {return (Locale)this._owner;}
+      if (this._owner is Cell) {return (Cell)this._owner;}
       if (this._owner is Player) {return (Player)this._owner;}
       else {return null;}
     }
     void SetOwner(object owner)
     {
-      if (this._owner is Locale) {(Locale)this._owner.GetCells()[this._posX][this._posY].AddItem(this);}
-      if (this._owner is Player) {(Player)this._owner;}
+      if (owner is Cell)
+      {
+        this._ownedBy=2;
+        this._owner=owner;
+        ((Cell)this._owner).AddItem(this);
+      }
+      if (owner is Player)
+      {
+        this._ownedBy=1;
+        this._owner=owner;
+        ((Player)this._owner).AddItem(this);
+      }
     }
 
     // public void SetAsKeyItem (string name,string description)

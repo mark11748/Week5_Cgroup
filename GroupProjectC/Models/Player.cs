@@ -89,5 +89,9 @@ namespace GroupProjectC.Models
         this.SetPosX(this.GetPosX()+1);
       }
     }
+
+    public List<Item> GetItems()                  {return this._items;}
+    public void SetItems(List<Item> newInventory) {this._items = newInventory;}
+    public void AddItem (Item newItem)            {this._items.Add(newItem);}
   }
 }

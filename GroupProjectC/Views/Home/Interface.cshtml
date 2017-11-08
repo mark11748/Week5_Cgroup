@@ -1,0 +1,6 @@
+@using GroupProjectC.Models
+@model Interface
+<div class="room-action-log">
+  <h4>@Model.room.GetName(), @Model.cells[@Model.playerX][@Model.playerY].GetName()</h4> 
+  <p>@Model.cells[@Model.playerX][@Model.playerY].GetDescription()</p>
+</div>

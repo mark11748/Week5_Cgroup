@@ -24,7 +24,8 @@ h2 {
   font-size: 40px; }
 
 h3 {
-  font-size: 35px; }
+  font-size: 35px;
+  margin: 0; }
 
 h4 {
   font-size: 20px; }
@@ -39,13 +40,18 @@ a:hover {
   padding: 0 30px 0 30px;
   height: 100%; }
 
-.footer {
-  margin-top: 30px;
-  display: flex;
-  width: 100%; }
+footer {
+  margin: 30px 0 0 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #677585; }
+
+footer .container {
+  display: flex; }
 
 .footer-column {
-  width: 50%; }
+  width: 50%;
+  align-self: flex-start; }
 
 .last {
   display: flex;
@@ -56,12 +62,19 @@ a:hover {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: center;
+  align-items: flex-end; }
+
+.footer-column h3 {
+  font-size: 24px;
+  color: rgba(183, 195, 210, 0.6); }
 
 .instruction-link {
   width: 100%;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10vh 0; }
 
 .instruction-link:hover .instructions {
   display: block;
@@ -80,16 +93,15 @@ a:hover {
 .instructions-body {
   align-items: center;
   display: flex;
-  justify-content: flex-start;
-  background-color: rgba(183, 195, 210, 0.6); }
+  justify-content: flex-start; }
 
 .instructions img {
   width: 30%; }
 
 .instruction-link h3 {
-  background-color: #c2192e;
+  background-color: #677585;
   color: white;
-  border: 5px solid #82101e;
+  border: 5px solid rgba(183, 195, 210, 0.6);
   padding: 10px 20px;
   border-radius: 40%; }
 
@@ -139,7 +151,8 @@ li:hover {
 .hero {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  min-height: 100vh; }
 
 .banner-text {
   width: 800px;
@@ -175,50 +188,8 @@ li:hover {
   height: auto;
   flex-wrap: wrap; }
 
-.left {
-  width: 20%;
-  display: flex; }
-
-.half-hero {
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-start; }
-
-.side-box {
-  width: 100%; }
-
-.side-box a {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.side-box img {
-  width: 90%;
-  position: relative; }
-
-.side-box h3 {
-  position: absolute;
-  align-self: center;
-  z-index: 1;
-  font-size: 4vw;
-  text-align: center;
-  width: 10vw;
-  margin: -10px 0 0 -15px; }
-
-.game-area {
-  max-width: 800px;
-  width: 65vw;
-  max-height: 1900px;
-  height: 40vh;
-  border: 6px solid #677585;
-  margin-bottom: 10px; }
-
 .play-banner a:hover h2, .play-banner a:hover h3, .side-box a:hover h2, .side-box a:hover h3 {
   text-shadow: 2px 2px #677585; }
-
-.right {
-  display: flex;
-  flex-direction: row; }
 
 @media screen and (max-width: 900px) {
   .play-banner h2 {
@@ -238,11 +209,15 @@ li:hover {
   display: grid;
   grid-gap: 0.3vw;
   width: 50%;
+  height: 100%;
   border: 6px solid #677585;
   margin-bottom: 40px; }
 
-.game-grid:last-child {
-  margin-left: 15px; }
+.items-box {
+  margin-left: 15px;
+  border: 6px solid #677585;
+  margin-bottom: 40px;
+  width: 50%; }
 
 .floor-one, .floor-two {
   grid-template-columns: 1fr 1fr 1fr;
@@ -309,7 +284,49 @@ li:hover {
   grid-column: 0.4;
   grid-row: 0.4; }
 
-.floor-two, .floor-one {
+.floor-two, .floor-three {
   display: none; }
+
+.left {
+  width: 20%;
+  display: flex; }
+
+.half-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+
+.side-box {
+  width: 100%; }
+
+.side-box a {
+  display: flex;
+  justify-content: center; }
+
+.side-box img {
+  width: 90%;
+  position: relative; }
+
+.side-box h3 {
+  position: absolute;
+  z-index: 1;
+  font-size: 4vw;
+  text-align: center;
+  width: 10vw;
+  margin: 30px 0 0 -15px; }
+
+.game-area {
+  max-width: 800px;
+  width: 65vw;
+  max-height: 1900px;
+  height: 40vh;
+  border: 6px solid #677585;
+  margin-bottom: 10px; }
+
+.gridboard {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
 
 /*# sourceMappingURL=styles.css.map */

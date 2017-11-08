@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  min-height: 100vh;
 }
 
 .banner-text {
@@ -43,63 +44,11 @@
   flex-wrap: wrap;
   }
 
-.left {
-  width: 20%;
-  display: flex;
-}
-
-.half-hero  {
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-start;
-}
-
-
-.side-box {
-  width: 100%;
-}
-
-.side-box a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.side-box img {
-  width: 90%;
-  position: relative;
-}
-
-.side-box h3 {
-  position: absolute;
-  align-self: center;
-  z-index: 1;
-  font-size: 4vw;
-  text-align: center;
-  width: 10vw;
-  margin: -10px 0 0 -15px;
-}
-
-.game-area {
-  max-width: 800px;
-  width: 65vw;
-  max-height: 1900px;
-  height: 40vh;
-  border: $border-style;
-  margin-bottom: 10px;
-}
-
-.play-banner a:hover, .side-box a:hover {
-  h2, h3 {
-    text-shadow: 2px 2px $darker-blue;
+  .play-banner a:hover, .side-box a:hover {
+    h2, h3 {
+      text-shadow: 2px 2px $darker-blue;
+    }
   }
-}
-
-.right {
-  display: flex;
-  flex-direction: row;
-}
-
 
 @media screen and(max-width: 900px) {
 

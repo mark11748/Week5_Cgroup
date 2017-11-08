@@ -2,14 +2,15 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  // height: auto;
+  align-items: center;
+  margin: 0 0 10vh 0;
 }
 
 .instruction-link:hover .instructions {
   display: block;
   width: 100%;
 }
-//
+
 .instruction-link:hover {
   display: block;
   text-align: center;
@@ -26,17 +27,16 @@
   align-items: center;
   display: flex;
   justify-content: flex-start;
-  background-color: $body-color;
-
 }
+
 .instructions img {
   width: 30%;
 }
 
 .instruction-link h3 {
-  background-color: $red-text;
+  background-color: $darker-blue;
   color: white;
-  border: 5px solid $redder-text;
+  border: 5px solid $body-color;
   padding: 10px 20px;
   border-radius: 40%;
 }

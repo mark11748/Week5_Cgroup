@@ -2,12 +2,16 @@
   display: grid;
   grid-gap: 0.3vw;
   width: 50%;
+  height: 100%;
   border: $border-style;
   margin-bottom: 40px;
 }
 
-.game-grid:last-child {
+.items-box {
   margin-left: 15px;
+  border: $border-style;
+  margin-bottom: 40px;
+  width: 50%;
 }
 
 .floor-one, .floor-two {
@@ -78,6 +82,6 @@
   @include grid(2,2);
 }
 
-.floor-two, .floor-one {
+.floor-two, .floor-three {
   display: none;
 }

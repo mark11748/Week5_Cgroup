@@ -39,7 +39,10 @@ namespace GroupProjectC.Models
       else {return null;}
     }
     void SetOwner(object owner)
-    { if (owner is Locale || owner is Player) { this._owner=owner; } }
+    {
+      if (this._owner is Locale) {(Locale)this._owner.GetCells()[this._posX][this._posY].AddItem(this);}
+      if (this._owner is Player) {(Player)this._owner;}
+    }
 
     // public void SetAsKeyItem (string name,string description)
     // {

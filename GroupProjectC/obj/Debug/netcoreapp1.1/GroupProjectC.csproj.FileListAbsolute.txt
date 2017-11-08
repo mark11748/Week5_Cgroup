@@ -11,3 +11,5 @@
 /Users/markWoodward/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.pdb
 /Users/markWoodward/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.dll
 /Users/markWoodward/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.pdb
+/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.dll
+/Users/Guest/Desktop/Week5_Cgroup-BACKUP-master/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.pdb

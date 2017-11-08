@@ -16,6 +16,10 @@ namespace GroupProjectC.Models
     private Border _s;
     private Border _e;
     private Border _w;
+    //Is it useable? (DEFAULT=true)
+    private bool _accessable=true;
+    public bool IsAccessable    () {return _accessable;}
+    public void ToggleAccessable() {_accessable = !_accessable;}
     //does it have items?
     private List<Item> _items;
 
@@ -79,6 +83,8 @@ namespace GroupProjectC.Models
 
     public List<Item> GetItems()                  {return this._items;}
     public void SetItems(List<Item> newInventory) {this._items = newInventory;}
+    public void AddItem (Item newItem)            {this._items.Add(newItem);}
+
 
     //TESTED COPY FUNCTION
     public Cell CopyOf()

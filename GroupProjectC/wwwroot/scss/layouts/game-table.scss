@@ -1,14 +1,19 @@
 .game-grid {
   display: grid;
-  grid-template-columns: none;
-  grid-gap: 0px;
-  grid-auto-rows: minmax(100px, auto);
-  // max-width: 400px;
-  // width: 35vw;
-  // max-height: 400px;
-  // height: 40vh;
+  grid-gap: 0.3vw;
+  width: 50%;
   border: $border-style;
+  margin-bottom: 40px;
 }
+
+.game-grid:last-child {
+  margin-left: 15px;
+}
+
+.floor-one, .floor-two {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 10vw 10vw 10vw;
+  }
 
 .game-grid > div {
   border: 1px solid black;
@@ -27,89 +32,52 @@
 }
 
 .four {
-  @include grid(4,1);
-}
-
-.five {
-  @include grid(5,1);
-}
-
-.six {
   @include grid(1,2);
 }
 
-.seven {
+.five {
   @include grid(2,2);
 }
 
-.eight {
+.six {
   @include grid(3,2);
 }
 
-.nine {
-  @include grid(4,2);
-}
-
-.ten {
-  @include grid(5,2);
-}
-
-.eleven {
+.seven {
   @include grid(1,3);
 }
 
-.twelve {
+.eight {
   @include grid(2,3);
 }
 
-.thirteen {
+.nine {
   @include grid(3,3);
 }
 
-.fourteen {
-  @include grid(4,3);
+.floor-three {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 10vw 10vw;
+  width: 50%;
+  border: $border-style;
 }
 
-.fifteen {
-  @include grid(5,3);
+.one-three {
+  @include grid(1,1);
 }
 
-.sixteen {
-  @include grid(1,4);
+.two-three {
+  @include grid(2,1);
 }
 
-.seventeen {
-  @include grid(2,4);
+.three-three {
+  @include grid(1,2);
 }
 
-.eighteen {
-  @include grid(3,4);
+.four-three {
+  @include grid(2,2);
 }
 
-.nineteen {
-  @include grid(4,4);
-}
-
-.twenty {
-  @include grid(5,4);
-}
-
-.twenty-one {
-  @include grid(1,5);
-}
-
-.twenty-two {
-  @include grid(2,5);
-}
-
-.twenty-three {
-  @include grid(3,5);
-}
-
-.twenty-four {
-  @include grid(4,5);
-}
-
-.twenty-five {
-  @include grid(5,5);
+.floor-two, .floor-one {
+  display: none;
 }

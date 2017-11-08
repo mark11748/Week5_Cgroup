@@ -10,7 +10,7 @@
   margin: 0 10% 0 10%;
   display: flex;
   justify-content: center;
-  background-image: url('../img/spash_title.png');
+  background-image: url('../img/splash_title.gif');
   background-repeat: no-repeat;
   background-position: center;
   border: $border-style;
@@ -43,17 +43,9 @@
   flex-wrap: wrap;
   }
 
-.instruction-link {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: auto;
-}
-
 .left {
   width: 20%;
   display: flex;
-  align-items: stretch;
 }
 
 .half-hero  {
@@ -71,7 +63,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .side-box img {
@@ -92,11 +83,22 @@
 .game-area {
   max-width: 800px;
   width: 65vw;
-  max-height: 400px;
+  max-height: 1900px;
   height: 40vh;
   border: $border-style;
+  margin-bottom: 10px;
 }
 
+.play-banner a:hover, .side-box a:hover {
+  h2, h3 {
+    text-shadow: 2px 2px $darker-blue;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+}
 
 
 @media screen and(max-width: 900px) {
@@ -108,4 +110,15 @@
   .side-box h3 {
     margin: -5px 0 0 -5px;
   }
+
+    .half-hero  {
+      flex-direction: row;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+  .left {
+    width: 100%;
+  }
+
 }

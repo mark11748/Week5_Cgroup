@@ -8,20 +8,26 @@
   box-sizing: border-box;
   margin: 0; }
 
-body, html {
+html, body {
+  height: 100%; }
+
+body {
   color: #fdfeff;
   background-color: rgba(183, 195, 210, 0.6);
   font-family: 'Open Sans', sans-serif; }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Love Ya Like A Sister', cursive;
-  color: #C2192E; }
+  color: #c2192e; }
 
 h2 {
   font-size: 40px; }
 
 h3 {
   font-size: 35px; }
+
+h4 {
+  font-size: 20px; }
 
 a {
   color: white; }
@@ -30,10 +36,11 @@ a:hover {
   color: #677585; }
 
 .container {
-  padding: 30px 30px 0 30px;
-  height: auto; }
+  padding: 0 30px 0 30px;
+  height: 100%; }
 
 .footer {
+  margin-top: 30px;
   display: flex;
   width: 100%; }
 
@@ -42,13 +49,19 @@ a:hover {
 
 .last {
   display: flex;
-  justify-content: flex-end; }
+  flex-flow: column;
+  align-items: center; }
 
 .last ul {
   list-style: none;
   display: inline;
   display: flex;
   justify-content: flex-end; }
+
+.instruction-link {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 .instruction-link:hover .instructions {
   display: block;
@@ -67,22 +80,33 @@ a:hover {
 .instructions-body {
   align-items: center;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  background-color: rgba(183, 195, 210, 0.6); }
 
 .instructions img {
   width: 30%; }
 
-.instruction-link {
-  margin: 0 0 20vh 0; }
+.instruction-link h3 {
+  background-color: #c2192e;
+  color: white;
+  border: 5px solid #82101e;
+  padding: 10px 20px;
+  border-radius: 40%; }
+
+.instruction-link:hover h3 {
+  border-radius: 0; }
 
 nav ul {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: center; }
 
 nav li {
   margin: 10px; }
+
+li:hover {
+  color: #677585; }
 
 .fa-bars {
   display: none; }
@@ -123,7 +147,7 @@ nav li {
   margin: 0 10% 0 10%;
   display: flex;
   justify-content: center;
-  background-image: url("../img/spash_title.png");
+  background-image: url("../img/splash_title.gif");
   background-repeat: no-repeat;
   background-position: center;
   border: 6px solid #677585; }
@@ -151,16 +175,9 @@ nav li {
   height: auto;
   flex-wrap: wrap; }
 
-.instruction-link {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  height: auto; }
-
 .left {
   width: 20%;
-  display: flex;
-  align-items: stretch; }
+  display: flex; }
 
 .half-hero {
   flex-direction: column;
@@ -191,22 +208,45 @@ nav li {
 .game-area {
   max-width: 800px;
   width: 65vw;
-  max-height: 400px;
+  max-height: 1900px;
   height: 40vh;
-  border: 6px solid #677585; }
+  border: 6px solid #677585;
+  margin-bottom: 10px; }
+
+.play-banner a:hover h2, .play-banner a:hover h3, .side-box a:hover h2, .side-box a:hover h3 {
+  text-shadow: 2px 2px #677585; }
+
+.right {
+  display: flex;
+  flex-direction: row; }
 
 @media screen and (max-width: 900px) {
   .play-banner h2 {
     font-size: 5vw; }
 
   .side-box h3 {
-    margin: -5px 0 0 -5px; } }
+    margin: -5px 0 0 -5px; }
+
+  .half-hero {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start; }
+
+  .left {
+    width: 100%; } }
 .game-grid {
   display: grid;
-  grid-template-columns: none;
-  grid-gap: 0px;
-  grid-auto-rows: minmax(100px, auto);
-  border: 6px solid #677585; }
+  grid-gap: 0.3vw;
+  width: 50%;
+  border: 6px solid #677585;
+  margin-bottom: 40px; }
+
+.game-grid:last-child {
+  margin-left: 15px; }
+
+.floor-one, .floor-two {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 10vw 10vw 10vw; }
 
 .game-grid > div {
   border: 1px solid black; }
@@ -224,91 +264,52 @@ nav li {
   grid-row: 0.2; }
 
 .four {
-  grid-column: 0.8;
-  grid-row: 0.2; }
+  grid-column: 0.2;
+  grid-row: 0.4; }
 
 .five {
-  grid-column: 1;
-  grid-row: 0.2; }
+  grid-column: 0.4;
+  grid-row: 0.4; }
 
 .six {
-  grid-column: 0.2;
+  grid-column: 0.6;
   grid-row: 0.4; }
 
 .seven {
-  grid-column: 0.4;
-  grid-row: 0.4; }
+  grid-column: 0.2;
+  grid-row: 0.6; }
 
 .eight {
-  grid-column: 0.6;
-  grid-row: 0.4; }
+  grid-column: 0.4;
+  grid-row: 0.6; }
 
 .nine {
-  grid-column: 0.8;
+  grid-column: 0.6;
+  grid-row: 0.6; }
+
+.floor-three {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 10vw 10vw;
+  width: 50%;
+  border: 6px solid #677585; }
+
+.one-three {
+  grid-column: 0.2;
+  grid-row: 0.2; }
+
+.two-three {
+  grid-column: 0.4;
+  grid-row: 0.2; }
+
+.three-three {
+  grid-column: 0.2;
   grid-row: 0.4; }
 
-.ten {
-  grid-column: 1;
+.four-three {
+  grid-column: 0.4;
   grid-row: 0.4; }
 
-.eleven {
-  grid-column: 0.2;
-  grid-row: 0.6; }
-
-.twelve {
-  grid-column: 0.4;
-  grid-row: 0.6; }
-
-.thirteen {
-  grid-column: 0.6;
-  grid-row: 0.6; }
-
-.fourteen {
-  grid-column: 0.8;
-  grid-row: 0.6; }
-
-.fifteen {
-  grid-column: 1;
-  grid-row: 0.6; }
-
-.sixteen {
-  grid-column: 0.2;
-  grid-row: 0.8; }
-
-.seventeen {
-  grid-column: 0.4;
-  grid-row: 0.8; }
-
-.eighteen {
-  grid-column: 0.6;
-  grid-row: 0.8; }
-
-.nineteen {
-  grid-column: 0.8;
-  grid-row: 0.8; }
-
-.twenty {
-  grid-column: 1;
-  grid-row: 0.8; }
-
-.twenty-one {
-  grid-column: 0.2;
-  grid-row: 1; }
-
-.twenty-two {
-  grid-column: 0.4;
-  grid-row: 1; }
-
-.twenty-three {
-  grid-column: 0.6;
-  grid-row: 1; }
-
-.twenty-four {
-  grid-column: 0.8;
-  grid-row: 1; }
-
-.twenty-five {
-  grid-column: 1;
-  grid-row: 1; }
+.floor-two, .floor-one {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

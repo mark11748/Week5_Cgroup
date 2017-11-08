@@ -3,11 +3,15 @@ nav ul {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 nav li {
   margin: 10px;
+}
+
+li:hover {
+  color: $darker-blue;
 }
 
 .fa-bars {

@@ -8,16 +8,21 @@
   margin: 0;
 
 }
+html, body {
+    height: 100%;
+}
 
-
-
-body, html {
+body {
   color: $text-color;
   background-color: $body-color;
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3 {
+// body {
+//   height: 100%;
+// }
+
+h1, h2, h3, h4 {
   font-family: 'Love Ya Like A Sister', cursive;
   color: $red-text;
 }
@@ -30,6 +35,10 @@ h3 {
   font-size: 35px;
 }
 
+h4 {
+  font-size: 20px;
+}
+
 a {
   color: white;
 }
@@ -39,6 +48,6 @@ a:hover {
 }
 
 .container {
-  padding: 30px 30px 0 30px;
-  height: auto;
+  padding: 0 30px 0 30px;
+  height: 100%;
 }

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 10vh 0;
+  margin: 0 0 40vh 0;
 }
 
 .instruction-link:hover .instructions {
@@ -21,6 +21,7 @@
   display: none;
   height: 20vh;
   border: $border-style;
+  margin-bottom: 40vh;
 }
 
 .instructions-body {

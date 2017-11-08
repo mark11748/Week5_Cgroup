@@ -18,5 +18,17 @@ namespace GroupProjectC.Controllers
       {
         return View();
       }
+
+      [HttpGet("/new")]
+      public ActionResult New()
+      {
+        return View();
+      }
+
+      [HttpGet("/save")]
+      public ActionResult Save()
+      {
+        return View();
+      }
     }
 }

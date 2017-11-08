@@ -3,7 +3,11 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+<<<<<<< HEAD
     <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/Guest/Desktop/Week5_Cgroup/GroupProjectC/obj/project.assets.json</ProjectAssetsFile>
+=======
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">/Users/Guest/Desktop/Week5_Cgroup-BACKUP/GroupProjectC/obj/project.assets.json</ProjectAssetsFile>
+>>>>>>> f1a8b6d9d51d4d857853d85a6df5226cd0a72acc
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/Guest/.nuget/packages/</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/Guest/.nuget/packages/</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>

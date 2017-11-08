@@ -1,0 +1,87 @@
+.game-grid {
+  display: grid;
+  grid-gap: 0.3vw;
+  width: 50%;
+  height: 100%;
+  border: $border-style;
+  margin-bottom: 40px;
+}
+
+.items-box {
+  margin-left: 15px;
+  border: $border-style;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.floor-one, .floor-two {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 10vw 10vw 10vw;
+  }
+
+.game-grid > div {
+  border: 1px solid black;
+}
+
+.one {
+  @include grid(1,1);
+}
+
+.two {
+  @include grid(2,1);
+}
+
+.three {
+  @include grid(3,1);
+}
+
+.four {
+  @include grid(1,2);
+}
+
+.five {
+  @include grid(2,2);
+}
+
+.six {
+  @include grid(3,2);
+}
+
+.seven {
+  @include grid(1,3);
+}
+
+.eight {
+  @include grid(2,3);
+}
+
+.nine {
+  @include grid(3,3);
+}
+
+.floor-three {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 10vw 10vw;
+  width: 50%;
+  border: $border-style;
+}
+
+.one-three {
+  @include grid(1,1);
+}
+
+.two-three {
+  @include grid(2,1);
+}
+
+.three-three {
+  @include grid(1,2);
+}
+
+.four-three {
+  @include grid(2,2);
+}
+
+.floor-two, .floor-three {
+  display: none;
+}

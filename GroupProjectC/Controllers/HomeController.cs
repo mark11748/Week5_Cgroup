@@ -28,5 +28,23 @@ namespace GroupProjectC.Controllers
         };
         return View("Interface", gameDisplay);
       }
+
+      [HttpGet("/game")]
+      public ActionResult Game()
+      {
+        return View();
+      }
+
+      [HttpGet("/new")]
+      public ActionResult New()
+      {
+        return View();
+      }
+
+      [HttpGet("/save")]
+      public ActionResult Save()
+      {
+        return View();
+      }
     }
 }

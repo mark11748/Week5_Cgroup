@@ -1,0 +1,46 @@
+.instruction-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10vh 0;
+}
+
+.instruction-link:hover .instructions {
+  display: block;
+  width: 100%;
+}
+
+.instruction-link:hover {
+  display: block;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+
+.instructions {
+  display: none;
+  height: 20vh;
+  border: $border-style;
+}
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.instructions img {
+  width: 30%;
+}
+
+.instruction-link h3 {
+  background-color: $darker-blue;
+  color: white;
+  border: 5px solid $body-color;
+  padding: 10px 20px;
+  border-radius: 40%;
+}
+
+.instruction-link:hover h3 {
+  border-radius: 0;
+}

@@ -1,0 +1,19 @@
+$body-color: rgba(183,195,210, 0.6);
+$text-color: rgba(253, 254, 255, 1);
+$darker-blue: rgba(103,117,133, 1);
+$red-text: rgb(194, 25, 46);
+$redder-text: rgb(130, 16, 30);
+
+$border-style: 6px solid $darker-blue;
+
+@import url('https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700');
+
+@font-face {
+  font-family: 'Fink-Roman';
+  src: url('../fonts/FinkBold.ttf');
+}
+
+@mixin grid($column,$row) {
+  grid-column: $column / 5;
+  grid-row: $row / 5;
+}

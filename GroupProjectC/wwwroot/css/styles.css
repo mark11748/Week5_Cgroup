@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Open+Sans:700");
+@font-face {
+  font-family: 'Fink-Roman';
+  src: url("../fonts/FinkBold.ttf"); }
+/* For testing only */
+/* End for testing */
+*, *::before, *::after {
+  box-sizing: border-box; }
+
+body {
+  height: 100%; }
+
+body {
+  color: #fdfeff;
+  background-color: rgba(183, 195, 210, 0.6);
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3, h4 {
+  font-family: 'Love Ya Like A Sister', cursive;
+  color: #c2192e; }
+
+h2 {
+  font-size: 40px; }
+
+h3 {
+  font-size: 35px;
+  margin: 0; }
+
+h4 {
+  font-size: 20px; }
+
+a {
+  color: white; }
+
+a:hover {
+  color: #677585; }
+
+.container {
+  padding: 0 30px 0 30px;
+  height: 100%; }
+
+footer {
+  margin: 30px 0 0 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #677585; }
+
+footer .container {
+  display: flex; }
+
+.footer-column {
+  width: 50%;
+  align-self: flex-start; }
+
+.last {
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+.last ul {
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.footer-column h3 {
+  font-size: 24px;
+  color: rgba(183, 195, 210, 0.6); }
+
+.instruction-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 10vh 0; }
+
+.instruction-link:hover .instructions {
+  display: block;
+  width: 100%; }
+
+.instruction-link:hover {
+  display: block;
+  text-align: center;
+  margin: 0 0 0 0; }
+
+.instructions {
+  display: none;
+  height: 20vh;
+  border: 6px solid #677585; }
+
+.instructions-body {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start; }
+
+.instructions img {
+  width: 30%; }
+
+.instruction-link h3 {
+  background-color: #677585;
+  color: white;
+  border: 5px solid rgba(183, 195, 210, 0.6);
+  padding: 10px 20px;
+  border-radius: 40%; }
+
+.instruction-link:hover h3 {
+  border-radius: 0; }
+
+nav ul {
+  list-style: none;
+  display: inline;
+  display: flex;
+  justify-content: center; }
+
+nav li {
+  margin: 10px; }
+
+li:hover {
+  color: #677585; }
+
+.fa-bars {
+  display: none; }
+
+.fa {
+  font-size: 30px; }
+
+@media screen and (max-width: 700px) {
+  .banner-text {
+    margin: 0; }
+
+  .play-banner, .instruction-link {
+    height: auto; }
+
+  nav ul {
+    display: none; }
+
+  .fa-bars {
+    display: block;
+    margin-bottom: 80px; }
+
+  nav:hover ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0; }
+
+  nav:hover .fa-bars {
+    margin-bottom: 0px; } }
+.hero {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+.banner-text {
+  width: 800px;
+  height: 400px;
+  margin: 0 10% 0 10%;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/splash_title.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 6px solid #677585; }
+
+.play-banner a {
+  display: flex;
+  justify-content: center; }
+
+.play-banner img {
+  position: relative;
+  width: 40vw;
+  height: 40%; }
+
+.play-banner h2 {
+  position: absolute;
+  align-self: center;
+  width: 20vw;
+  z-index: 1;
+  font-size: 3em;
+  margin: -15px 0 0 -15px;
+  text-align: center; }
+
+.play-banner {
+  text-align: center;
+  height: auto;
+  flex-wrap: wrap; }
+
+.play-banner a:hover h2, .play-banner a:hover h3, .side-box a:hover h2, .side-box a:hover h3 {
+  text-shadow: 2px 2px #677585; }
+
+@media screen and (max-width: 900px) {
+  .play-banner h2 {
+    font-size: 5vw; }
+
+  .side-box h3 {
+    margin: -5px 0 0 -5px; }
+
+  .half-hero {
+    flex-direction: row;
+    display: flex;
+    justify-content: flex-start; }
+
+  .left {
+    width: 100%; } }
+.game-grid {
+  display: grid;
+  grid-gap: 0.3vw;
+  width: 50%;
+  height: 100%;
+  border: 6px solid #677585;
+  margin-bottom: 40px; }
+
+.items-box {
+  margin-left: 15px;
+  border: 6px solid #677585;
+  margin-bottom: 40px;
+  width: 50%; }
+
+.floor-one, .floor-two {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 10vw 10vw 10vw; }
+
+.game-grid > div {
+  border: 1px solid black; }
+
+.one {
+  grid-column: 0.2;
+  grid-row: 0.2; }
+
+.two {
+  grid-column: 0.4;
+  grid-row: 0.2; }
+
+.three {
+  grid-column: 0.6;
+  grid-row: 0.2; }
+
+.four {
+  grid-column: 0.2;
+  grid-row: 0.4; }
+
+.five {
+  grid-column: 0.4;
+  grid-row: 0.4; }
+
+.six {
+  grid-column: 0.6;
+  grid-row: 0.4; }
+
+.seven {
+  grid-column: 0.2;
+  grid-row: 0.6; }
+
+.eight {
+  grid-column: 0.4;
+  grid-row: 0.6; }
+
+.nine {
+  grid-column: 0.6;
+  grid-row: 0.6; }
+
+.floor-three {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 10vw 10vw;
+  width: 50%;
+  border: 6px solid #677585; }
+
+.one-three {
+  grid-column: 0.2;
+  grid-row: 0.2; }
+
+.two-three {
+  grid-column: 0.4;
+  grid-row: 0.2; }
+
+.three-three {
+  grid-column: 0.2;
+  grid-row: 0.4; }
+
+.four-three {
+  grid-column: 0.4;
+  grid-row: 0.4; }
+
+.floor-two, .floor-three {
+  display: none; }
+
+.left {
+  width: 20%;
+  display: flex; }
+
+.half-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+
+.side-box {
+  width: 100%; }
+
+.side-box a {
+  display: flex;
+  justify-content: center; }
+
+.side-box img {
+  width: 90%;
+  position: relative; }
+
+.side-box h3 {
+  position: absolute;
+  z-index: 1;
+  font-size: 4vw;
+  text-align: center;
+  width: 10vw;
+  margin: 30px 0 0 -15px; }
+
+.game-area {
+  max-width: 800px;
+  width: 65vw;
+  max-height: 1900px;
+  height: 40vh;
+  border: 6px solid #677585;
+  margin-bottom: 10px; }
+
+.gridboard {
+  display: flex;
+  flex-direction: row;
+  height: 100%; }
+
+.game-area h2 {
+  text-align: center;
+  color: #c2192e; }
+
+/*# sourceMappingURL=styles.css.map */

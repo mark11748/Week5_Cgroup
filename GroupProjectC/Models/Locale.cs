@@ -36,14 +36,14 @@ namespace GroupProjectC.Models
           //this moves through the inner (y-axis) arrays
           foreach(Cell y in x)
           {
-            int Y_index = this.GetCells().IndexOf(y);
+            int Y_index = x.IndexOf(y);
             //if cell has coordinates in name already remove them
             //set yName to sub-string yName[0] to "[" index
             if ( (y.GetName().Contains("[")) )
             { y.SetName(y.GetName().Substring(0,y.GetName().IndexOf("["))); }
             //if cell does not have coordinates in name already add them
             else
-            { y.SetName(cell_Y.name + "[" + this.GetCells().IndexOf(x) + "," + this.GetCells().IndexOf(y) + "]"); }
+            { y.SetName(y.GetName() + "[" + this.GetCells().IndexOf(x) + "," + x.IndexOf(y) + "]"); }
           }
         }
       }
@@ -54,21 +54,26 @@ namespace GroupProjectC.Models
     {
       //for each X position add a space to the start of the corresponding Y array
       foreach(List<Cell> cells in this.GetCells())
-      {cell.Insert(0,new Cell());}
+      {cells.Insert(0,new Cell());}
     }
-    public void addSouthRow() {
+    
+    public void addSouthRow()
+    {
     //for each X position add a space to the end of the corresponding Y array
     foreach(List<Cell> cells in this.GetCells())
     {cells.Add(new Cell());}
     }
-    public void addWestRow() {
+
+    public void addWestRow()
+    {
     //how long to make the row
     int width  = this.GetCells()[0].Count;
     //the x array grows from the left;
-    this.GetCells()[0].Insert(0,new List<Cell>(width));
-    foreach(Cell cell in this.GetCells()[0]){cell=undefined;};
+    this.GetCells().Insert(0,new List<Cell>(width));
     }
-    public void addEastRow() {
+
+    public void addEastRow()
+    {
     //how long to make the row
     int width  = this.GetCells()[0].Count;
     //the x array grows from the right;

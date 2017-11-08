@@ -19,27 +19,41 @@ namespace GroupProjectC.Models
     //does it have items?
     private List<Item> _items;
 
-    public Cell(string name        = "[PLACEHOLDER_Cl_NAME]",
-                string description = "[PLACEHOLDER_DESC]",
-                string rm          = "[PLACEHOLDER_Rm_NAME]",
-                int n = 1,int s = 1,int e = 1,int w = 1)
-                {
-                  _name=name;
-                  _description=description;
-                  _rmName=rm;
-                  _n=new Border(n);
-                  _s=new Border(s);
-                  _e=new Border(e);
-                  _w=new Border(w);
-                }
-    public Cell(string name        = "[PLACEHOLDER_Cl_NAME]",
-                string description = "[PLACEHOLDER_DESC]",
-                string rm          = "[PLACEHOLDER_Rm_NAME]")
-                {
-                  _name=name;
-                  _description=description;
-                  _rmName=rm;
-                }
+    public Cell()
+    {
+      this.SetName("[PLACEHOLDER_Cl_NAME]");
+      this.SetDescription("[PLACEHOLDER_DESC]");
+      this.SetRoom("[PLACEHOLDER_Rm_NAME]");
+      this.SetN(new Border(1));
+      this.SetS(new Border(1));
+      this.SetE(new Border(1));
+      this.SetW(new Border(1));
+    }
+    public Cell(string name)
+    {
+      this.SetName(name);
+      this.SetDescription("[PLACEHOLDER_DESC]");
+      this.SetRoom("[PLACEHOLDER_Rm_NAME]");
+      this.SetN(new Border(1));
+      this.SetS(new Border(1));
+      this.SetE(new Border(1));
+      this.SetW(new Border(1));
+    }
+
+    public Cell(string name,
+                string description,
+                string rm,
+                Border n,Border s,
+                Border e, Border w)
+    {
+      this._name=name;
+      this._description=description;
+      this._rmName=rm;
+      this._n=n.CopyOf();
+      this._s=s.CopyOf();
+      this._e=e.CopyOf();
+      this._w=w.CopyOf();
+    }
 
     public string GetName()
     {return _name;}
@@ -69,17 +83,19 @@ namespace GroupProjectC.Models
     //TESTED COPY FUNCTION
     public Cell CopyOf()
     {
-      Cell newCell = new Cell (this.GetName(),this.GetDescription(),this.GetRoom(),
-      this.GetN().CopyOf(),this.GetS().CopyOf(),this.GetE().CopyOf(),this.GetW().CopyOf());
+      Cell newCell = new Cell
+        (this.GetName(),this.GetDescription(),this.GetRoom(),
+         this.GetN(),this.GetS(),this.GetE(),this.GetW() );
       return newCell;
     }
     //NEED TO TEST COPY-WithItems FUNCTION
     public Cell CopyOf_AddItems()
     {
-      Cell newCell = new Cell (this.GetName(),this.GetDescription(),this.GetRoom(),
-      this.GetN().CopyOf(),this.GetS().CopyOf(),this.GetE().CopyOf(),this.GetW().CopyOf());
+      Cell newCell = new Cell
+        (this.GetName(),this.GetDescription(),this.GetRoom(),
+         this.GetN(),this.GetS(),this.GetE(),this.GetW() );
       //if old cell has items push them onto the items array of new cell
-      if (this.GetItems.Count>0)
+      if (this.GetItems().Count>0)
       {
         foreach(Item item in this.GetItems())
         {newCell.SetItems(this.GetItems());}

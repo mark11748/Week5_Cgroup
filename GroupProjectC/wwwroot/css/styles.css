@@ -5,10 +5,9 @@
 /* For testing only */
 /* End for testing */
 *, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0; }
+  box-sizing: border-box; }
 
-html, body {
+body {
   height: 100%; }
 
 body {
@@ -151,8 +150,7 @@ li:hover {
 .hero {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  min-height: 100vh; }
+  flex-wrap: wrap; }
 
 .banner-text {
   width: 800px;
@@ -328,5 +326,9 @@ li:hover {
   display: flex;
   flex-direction: row;
   height: 100%; }
+
+.game-area h2 {
+  text-align: center;
+  color: #c2192e; }
 
 /*# sourceMappingURL=styles.css.map */

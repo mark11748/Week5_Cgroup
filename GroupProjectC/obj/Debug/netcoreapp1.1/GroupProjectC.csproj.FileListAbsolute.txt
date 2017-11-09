@@ -6,3 +6,12 @@
 /Users/Guest/Desktop/CopyWeek5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.pdb
 /Users/Guest/Desktop/CopyWeek5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.dll
 /Users/Guest/Desktop/CopyWeek5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.pdb
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.deps.json
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.runtimeconfig.json
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.runtimeconfig.dev.json
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.csproj.CoreCompileInputs.cache
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.AssemblyInfo.cs
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.dll
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/obj/Debug/netcoreapp1.1/GroupProjectC.pdb
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.dll
+/Users/markWoodward/Desktop/Week5_Cgroup/GroupProjectC/bin/Debug/netcoreapp1.1/GroupProjectC.pdb

@@ -13,7 +13,7 @@ namespace GroupProjectC.Models
 
     public Locale (string name="[PLACEHOLDER_Rm_NAME]")
     { _name  = name; }
-    public void AddToWorld(int area=0){_id = GAMEBOARD.AddAreaToMap(this,area);}
+    public void AddRoomToArea(int area=0){_id = GAMEBOARD.AddAreaToMap(this,area);} /*renamed for clarity*/
     public int  GetId(){return _id;}
 
     public void SetName(string name) {this._name=name;}
@@ -56,7 +56,7 @@ namespace GroupProjectC.Models
       foreach(List<Cell> cells in this.GetCells())
       {cells.Insert(0,new Cell());}
     }
-    
+
     public void addSouthRow()
     {
     //for each X position add a space to the end of the corresponding Y array

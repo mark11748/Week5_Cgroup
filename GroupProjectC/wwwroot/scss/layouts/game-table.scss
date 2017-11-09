@@ -3,7 +3,7 @@
   grid-gap: 0.3vw;
   width: 50%;
   height: 100%;
-  // border: $border-style;
+  border: $border-style;
   margin-bottom: 40px;
 }
 
@@ -19,12 +19,13 @@
   img {
     width: 50%;
     height: 50%;
-    animation: rotate 250ms 2;
+    animation: rotate 250ms 1 200ms;
   }
 }
 
-// .items-box img:hover {
-// }
+.items-box img:hover {
+  transform: rotate(30deg);
+}
 
 .floor-one {
   grid-template-columns: 1fr 1fr 1fr;

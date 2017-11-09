@@ -66,8 +66,13 @@ footer .container {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end; }
+
+.last i:hover {
+  color: rgba(183, 195, 210, 0.6);
+  transform: rotate(30deg);
+  font-size: 50px; }
 
 .footer-column h3 {
   font-size: 24px;
@@ -137,7 +142,7 @@ nav li {
 .fa {
   font-size: 30px; }
 
-nav li:hover {
+li:hover {
   animation: rotate 1s; }
 
 @media screen and (max-width: 700px) {
@@ -223,6 +228,7 @@ nav li:hover {
   grid-gap: 0.3vw;
   width: 50%;
   height: 100%;
+  border: 6px solid #677585;
   margin-bottom: 40px; }
 
 .items-box {
@@ -237,7 +243,10 @@ nav li:hover {
   .items-box img {
     width: 50%;
     height: 50%;
-    animation: rotate 250ms 2; }
+    animation: rotate 250ms 1 200ms; }
+
+.items-box img:hover {
+  transform: rotate(30deg); }
 
 .floor-one {
   grid-template-columns: 1fr 1fr 1fr;

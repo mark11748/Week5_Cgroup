@@ -7,7 +7,7 @@ namespace GroupProjectC
 {
   public static class DBConfiguration
     {
-      public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=FinalC;"; //may need multiple
+      public static string ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=game;"; //may need multiple
     }
   public class Startup
   {

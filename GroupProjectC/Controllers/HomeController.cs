@@ -29,6 +29,9 @@ namespace GroupProjectC.Controllers
       [HttpPost("/newgame")]
       public ActionResult Game_New()
       {
+
+        Player.DeleteAll();
+
         Cell cell1 = new Cell("Cell 0,0", "test description",
                               new Border(0),new Border(1),
                               new Border(1),new Border(0) );
@@ -74,6 +77,7 @@ namespace GroupProjectC.Controllers
         Player user = new Player(Request.Form["player-name"]);
         user.SetPosX(0);
         user.SetPosY(1);
+        user.Save();
 
         return View("Game",user);
       }
@@ -81,29 +85,33 @@ namespace GroupProjectC.Controllers
       [HttpPost("/mv_up")]
       public ActionResult MoveN()
       {
-       Player user = new Player(GAMEBOARD.playerName);
+       Player user = Player.Find(1);
        user.MoveN();
+       user.Save();
        return View("Game",user);
       }
       [HttpPost("/mv_dn")]
       public ActionResult MoveS()
       {
-       Player user = new Player(GAMEBOARD.playerName);
+       Player user = Player.Find(1);
        user.MoveS();
+       user.Save();
        return View("Game",user);
       }
       [HttpPost("/mv_rt")]
       public ActionResult MoveE()
       {
-       Player user = new Player(GAMEBOARD.playerName);
+       Player user = Player.Find(1);
        user.MoveE();
+       user.Save();
        return View("Game",user);
       }
       [HttpPost("/mv_lt")]
       public ActionResult MoveW()
       {
-       Player user = new Player(GAMEBOARD.playerName);
+       Player user = Player.Find(1);
        user.MoveW();
+       user.Save();
        return View("Game",user);
       }
 

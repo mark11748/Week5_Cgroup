@@ -16,6 +16,6 @@ namespace GroupProjectC.Models
     public static int  AddAreaToMap (Locale room, int area)                     /*Args : room object + map index number | Out: room index number in the specified map*/
     {_roomList[area].Add(room); return _roomList[area].IndexOf(room);}
 
-    public static string playerName="Bob";
+    public static int playerId=0;
   }
 }

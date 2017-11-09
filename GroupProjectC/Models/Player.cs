@@ -39,7 +39,7 @@ namespace GroupProjectC.Models
     public Locale GetRoom() { return GAMEBOARD.GetWorld()[this.GetMapId()][this.GetRoomId()]; }
     public Cell   GetCell() { return this.GetRoom().GetCells()[this.GetPosX()][this.GetPosY()]; }
 
-    public Player(string name="UNSET", int mapId = 0 , int roomId=0 , int posX=0 , int posY=0, int id=0)
+    public Player(string name, int mapId, int roomId, int posX, int posY, int id)
     {
       SetName(name);
       _mapId  = mapId;
@@ -66,7 +66,7 @@ namespace GroupProjectC.Models
           if (this.GetCell().GetN().GetExitId() > -1) //if room exit
           { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
         }
-        else { this.SetPosY(this.GetPosY()-1); }
+        this.SetPosY(this.GetPosY()-1);
       }
     }
     public void MoveS()
@@ -78,14 +78,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetS().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        if (this.GetCell().GetN().GetIsExit()) //if exit
+        if (this.GetCell().GetS().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
-          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
-          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
-          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+          if (this.GetCell().GetS().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetS().GetExitAreaId() ); }
+          if (this.GetCell().GetS().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetS().GetExitId() ); }
         }
-        else { this.SetPosY(this.GetPosY()+1); }
+        this.SetPosY(this.GetPosY()+1);
       }
     }
     public void MoveW()
@@ -97,14 +97,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetW().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        if (this.GetCell().GetN().GetIsExit()) //if exit
+        if (this.GetCell().GetW().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
-          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
-          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
-          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+          if (this.GetCell().GetW().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetW().GetExitAreaId() ); }
+          if (this.GetCell().GetW().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetW().GetExitId() ); }
         }
-        else { this.SetPosX(this.GetPosX()-1); }
+        this.SetPosX(this.GetPosX()-1);
       }
     }
     public void MoveE()
@@ -112,18 +112,18 @@ namespace GroupProjectC.Models
       if  (
             (this.GetPosX()+1) < this.GetRoom().GetCells().Count                        && //is cell out of bounds?
              this.GetRoom().GetCells()[this.GetPosX()+1][this.GetPosY()].IsAccessable() && //is cell useable?
-             this.GetCell().GetW().GetEdgeType() >0                                     && //is there a wall in the way?
-            !this.GetCell().GetW().GetIsLocked()                                           //is cell currently unlocked?
+             this.GetCell().GetE().GetEdgeType() >0                                     && //is there a wall in the way?
+            !this.GetCell().GetE().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        if (this.GetCell().GetN().GetIsExit()) //if exit
+        if (this.GetCell().GetE().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
-          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
-          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
-          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+          if (this.GetCell().GetE().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetE().GetExitAreaId() ); }
+          if (this.GetCell().GetE().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetE().GetExitId() ); }
         }
-        else { this.SetPosX(this.GetPosX()+1);}
+        this.SetPosX(this.GetPosX()+1); ;
       }
     }
 
@@ -136,7 +136,7 @@ namespace GroupProjectC.Models
      MySqlConnection conn = DB.Connection();
      conn.Open();
      MySqlCommand cmd = conn.CreateCommand();
-     cmd.CommandText = @"INSERT INTO players (name,map,room,x,y) VALUES (@name,@map,@room,@x,@y);";
+     cmd.CommandText = @"INSERT INTO players (name,mapId,roomId,playerX,playerY) VALUES (@name,@map,@room,@x,@y);";
 
      MySqlParameter name = new MySqlParameter();
      name.ParameterName = "@name";
@@ -172,7 +172,7 @@ namespace GroupProjectC.Models
     }
     public static Player Find(int id)
     {
-      Player currentPlayer = new Player("ERR",-1);
+      Player currentPlayer = new Player("ERR",-1,-1,-1,-1,-1);
 
       MySqlConnection conn = DB.Connection();
       conn.Open();
@@ -192,14 +192,48 @@ namespace GroupProjectC.Models
         int    room  = rdr.GetInt32(3);
         int    x     = rdr.GetInt32(4);
         int    y     = rdr.GetInt32(5);
+        int    newId = rdr.GetInt32(0);
 
-        currentPlayer = new Player(name,map,room,x,y);
+        currentPlayer = new Player(name,map,room,x,y,newId);
       }
       conn.Close();
       if (conn != null)
       {conn.Dispose();}
 
       return currentPlayer;
+    }
+    public void UpdatePosition(int id)
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      MySqlCommand cmd = conn.CreateCommand();
+      cmd.CommandText = @"UPDATE players SET mapId=@mapId, roomId=@roomId, playerX=@posX, playerY=@posY WHERE id=@id;";
+
+      MySqlParameter map = new MySqlParameter();
+      map.ParameterName = "@mapId";
+      map.Value = this.GetMapId();
+      cmd.Parameters.Add(map);
+      MySqlParameter room = new MySqlParameter();
+      room.ParameterName = "@roomId";
+      room.Value = this.GetRoomId();
+      cmd.Parameters.Add(room);
+      MySqlParameter posX = new MySqlParameter();
+      posX.ParameterName = "@posX";
+      posX.Value = this.GetPosX();
+      cmd.Parameters.Add(posX);
+      MySqlParameter posY = new MySqlParameter();
+      posY.ParameterName = "@posY";
+      posY.Value = this.GetPosY();
+      cmd.Parameters.Add(posY);
+      MySqlParameter targetId = new MySqlParameter();
+      targetId.ParameterName = "@id";
+      targetId.Value = id;
+      cmd.Parameters.Add(targetId);
+
+      cmd.ExecuteNonQuery();
+      conn.Close();
+      if (conn != null)
+      {conn.Dispose();}
     }
     public static void DeleteAll()
     {

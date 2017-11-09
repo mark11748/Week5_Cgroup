@@ -32,31 +32,31 @@ namespace GroupProjectC.Controllers
 
         Player.DeleteAll();
 
-        Cell cell1 = new Cell("Cell 0,0", "test description",
+        Cell cell1 = new Cell("Cell 0,0", "test description(0,0)",
                               new Border(0),new Border(1),
                               new Border(1),new Border(0) );
-        Cell cell2 = new Cell("Cell 0,1", "test description", //start cell
+        Cell cell2 = new Cell("Cell 0,1", "test description(0,1)", //start cell
                               new Border(1),new Border(1),
                               new Border(1),new Border(0) );
-        Cell cell3 = new Cell("Cell 0,2", "test description",
+        Cell cell3 = new Cell("Cell 0,2", "test description(0,2)",
                               new Border(1),new Border(0),
                               new Border(1),new Border(0) );
-        Cell cell4 = new Cell("Cell 1,0", "test description",
+        Cell cell4 = new Cell("Cell 1,0", "test description(1,0)",
                               new Border(0),new Border(1),
                               new Border(1),new Border(1) );
-        Cell cell5 = new Cell("Cell 1,1", "test description", //exit to room 2
+        Cell cell5 = new Cell("Cell 1,1", "test description(1,1)", //exit to room 2
                               new Border(1),new Border(1),
                               new Border(1),new Border(1) );
-        Cell cell6 = new Cell("Cell 1,2", "test description",
+        Cell cell6 = new Cell("Cell 1,2", "test description(1,2)",
                               new Border(1),new Border(0),
                               new Border(1),new Border(1) );
-        Cell cell7 = new Cell("Cell 2,0", "test description",
+        Cell cell7 = new Cell("Cell 2,0", "test description(2,0)",
                               new Border(0),new Border(1),
                               new Border(0),new Border(1) );
-        Cell cell8 = new Cell("Cell 2,1", "test description", //exit to room 1
+        Cell cell8 = new Cell("Cell 2,1", "test description(2,1)", //exit to room 1
                               new Border(1),new Border(1),
                               new Border(0),new Border(1) );
-        Cell cell9 = new Cell("Cell 2,2", "test description", //elevator
+        Cell cell9 = new Cell("Cell 2,2", "test description(2,2)", //elevator
                               new Border(1),new Border(0),
                               new Border(0),new Border(1) );
 
@@ -74,10 +74,9 @@ namespace GroupProjectC.Controllers
         Lobby.AddRoomToArea(0);     //Add a room(Lobby)     to the floor ; no args because 1st area is default
         StoreRoom.AddRoomToArea(0); //Add a room(StoreRoom) to the floor ; no args because 1st area is default
 
-        Player user = new Player(Request.Form["player-name"]);
-        user.SetPosX(0);
-        user.SetPosY(1);
+        Player user = new Player(Request.Form["player-name"],0,0,0,1,0);
         user.Save();
+        GAMEBOARD.playerId=user.GetId();
 
         return View("Game",user);
       }
@@ -85,34 +84,37 @@ namespace GroupProjectC.Controllers
       [HttpPost("/mv_up")]
       public ActionResult MoveN()
       {
-       Player user = Player.Find(1);
+       Player user = Player.Find(GAMEBOARD.playerId);
        user.MoveN();
-       user.Save();
-       return View("Game",user);
+       user.UpdatePosition(GAMEBOARD.playerId);
+       return View("Game",Player.Find(GAMEBOARD.playerId));
       }
       [HttpPost("/mv_dn")]
       public ActionResult MoveS()
       {
-       Player user = Player.Find(1);
+       Player user = Player.Find(GAMEBOARD.playerId);
        user.MoveS();
-       user.Save();
-       return View("Game",user);
+       user.UpdatePosition(GAMEBOARD.playerId);
+       return View("Game",Player.Find(GAMEBOARD.playerId));
       }
       [HttpPost("/mv_rt")]
       public ActionResult MoveE()
       {
-       Player user = Player.Find(1);
+       Player user = Player.Find(GAMEBOARD.playerId);
        user.MoveE();
-       user.Save();
-       return View("Game",user);
+       user.UpdatePosition(GAMEBOARD.playerId);
+      //  Console.WriteLine("player xy: "
+      //                   +Player.Find(GAMEBOARD.playerId).GetPosX()+" , "
+      //                   +Player.Find(GAMEBOARD.playerId).GetPosY());
+       return View("Game",Player.Find(GAMEBOARD.playerId));
       }
       [HttpPost("/mv_lt")]
       public ActionResult MoveW()
       {
-       Player user = Player.Find(1);
+       Player user = Player.Find(GAMEBOARD.playerId);
        user.MoveW();
-       user.Save();
-       return View("Game",user);
+       user.UpdatePosition(GAMEBOARD.playerId);
+       return View("Game",Player.Find(GAMEBOARD.playerId));
       }
 
 

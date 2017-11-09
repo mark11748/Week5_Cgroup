@@ -4,8 +4,8 @@ using MySql.Data.MySqlClient;
 
 namespace GroupProjectC.Models
 {
-  public class KeyItem : Item
+  public class TeleporterStatic : Item
   {
-
+    
   }
 }

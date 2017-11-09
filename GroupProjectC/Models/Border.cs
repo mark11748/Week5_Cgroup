@@ -13,12 +13,14 @@ namespace GroupProjectC.Models
     private int  _edgeType;
     private int  _lockId;
     private int  _exitId;
+    private int  _areaId;
 
-    public Border(int type=0, int exitId=-1, int lockId=-1)
+    public Border(int type=0, int exitId=-1, int exitAreaId=-1, int lockId=-1)
     {
       _edgeType = type;
-      if (exitId>-1) {this.SetIsExit(true);}
-      if (lockId>-1) {this.SetIsLocked(true);}
+      if (exitId>-1) {this.SetIsExit(true)     ; this.SetExitId(exitId);}
+      if (exitAreaId>-1) {this.SetIsExit(true) ; this.SetExitAreaId(exitAreaId);}
+      if (lockId>-1) {this.SetIsLocked(true)   ; this.SetExitId(lockId);}
 
       if (type<0 || type>2)
       {this._edgeType=0;}
@@ -30,16 +32,19 @@ namespace GroupProjectC.Models
       {/*is a door*/}
     }
 
-    public bool GetIsLocked()              {return this._isLocked;}
-    public void SetIsLocked(bool isLocked) {this._isLocked=isLocked;}
-    public bool GetIsExit  ()              {return this._isExit;}
-    public void SetIsExit  (bool isExit)   {this._isExit=isExit;}
-    public int  GetEdgeType()              {return this._edgeType;}
-    public void SetEdgeType(int edge)      {this._edgeType=edge;}
-    public int  GetLockId  ()              {return this._lockId;}
-    public void SetLockId  (int lockNumber){this._lockId=lockNumber;}
-    public int  GetExitId  ()              {return this._exitId;}
-    public void SetExitId  (int exitNumber){this._exitId=exitNumber;}
+
+    public bool GetIsLocked    ()              {return this._isLocked;}
+    public void SetIsLocked    (bool isLocked) {this._isLocked=isLocked;}
+    public bool GetIsExit      ()              {return this._isExit;}
+    public void SetIsExit      (bool isExit)   {this._isExit=isExit;}
+    public int  GetEdgeType    ()              {return this._edgeType;}
+    public void SetEdgeType    (int edge)      {this._edgeType=edge;}
+    public int  GetLockId      ()              {return this._lockId;}
+    public void SetLockId      (int lockNumber){this._lockId=lockNumber;}
+    public int  GetExitId      ()              {return this._exitId;}
+    public void SetExitId      (int roomNumber){this._exitId=roomNumber;}
+    public int  GetExitAreaId  ()              {return this._areaId;}
+    public void SetExitAreaId  (int areaNumber){this._areaId=areaNumber;}
 
     public Border CopyOf()
     {

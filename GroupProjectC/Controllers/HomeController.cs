@@ -41,7 +41,7 @@ namespace GroupProjectC.Controllers
         return View();
       }
 
-      [HttpPost("/game")]
+      [HttpPost("/newgame")]
       public ActionResult Game_New()
       {
         Cell cell1 = new Cell("Cell 0,0", "test description",
@@ -56,7 +56,7 @@ namespace GroupProjectC.Controllers
         Cell cell4 = new Cell("Cell 1,0", "test description",
                               new Border(0),new Border(1),
                               new Border(1),new Border(1) );
-        Cell cell5 = new Cell("Cell 1,1", "test description",
+        Cell cell5 = new Cell("Cell 1,1", "test description", //exit to room 2
                               new Border(1),new Border(1),
                               new Border(1),new Border(1) );
         Cell cell6 = new Cell("Cell 1,2", "test description",
@@ -65,7 +65,7 @@ namespace GroupProjectC.Controllers
         Cell cell7 = new Cell("Cell 2,0", "test description",
                               new Border(0),new Border(1),
                               new Border(0),new Border(1) );
-        Cell cell8 = new Cell("Cell 2,1", "test description",
+        Cell cell8 = new Cell("Cell 2,1", "test description", //exit to room 1
                               new Border(1),new Border(1),
                               new Border(0),new Border(1) );
         Cell cell9 = new Cell("Cell 2,2", "test description", //elevator
@@ -86,18 +86,21 @@ namespace GroupProjectC.Controllers
         Lobby.AddRoomToArea();     //Add a room(Lobby)     to the floor ; no args because 1st area is default
         StoreRoom.AddRoomToArea(); //Add a room(StoreRoom) to the floor ; no args because 1st area is default
 
+        Player user = new Player(Request.Form["player-name"]);
+        user.SetPosX(0);
+        user.SetPosY(1);
 
         return View();
       }
 
       [HttpPost("/mv_up")]
-      public ActionResult MoveN(){return View();}
+      public ActionResult MoveN(){user.MoveN(); return View();}
       [HttpPost("/mv_dn")]
-      public ActionResult MoveS(){return View();}
+      public ActionResult MoveS(){user.MoveS(); return View();}
       [HttpPost("/mv_rt")]
-      public ActionResult MoveE(){return View();}
+      public ActionResult MoveE(){user.MoveE(); return View();}
       [HttpPost("/mv_lt")]
-      public ActionResult MoveW(){return View();}
+      public ActionResult MoveW(){user.MoveW(); return View();}
 
 
       [HttpGet("/save")]

@@ -50,7 +50,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetN().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        this.SetPosY(this.GetPosY()-1);
+        if (this.GetCell().GetN().GetIsExit()) //if exit
+        {
+          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
+          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+        }
+        else { this.SetPosY(this.GetPosY()-1); }
       }
     }
     public void MoveS()
@@ -62,7 +69,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetS().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        this.SetPosY(this.GetPosY()+1);
+        if (this.GetCell().GetN().GetIsExit()) //if exit
+        {
+          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
+          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+        }
+        else { this.SetPosY(this.GetPosY()+1); }
       }
     }
     public void MoveW()
@@ -74,7 +88,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetW().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        this.SetPosX(this.GetPosX()-1);
+        if (this.GetCell().GetN().GetIsExit()) //if exit
+        {
+          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
+          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+        }
+        else { this.SetPosX(this.GetPosX()-1); }
       }
     }
     public void MoveE()
@@ -86,7 +107,14 @@ namespace GroupProjectC.Models
             !this.GetCell().GetW().GetIsLocked()                                           //is cell currently unlocked?
           )
       {
-        this.SetPosX(this.GetPosX()+1);
+        if (this.GetCell().GetN().GetIsExit()) //if exit
+        {
+          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
+          { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
+          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
+          { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
+        }
+        else { this.SetPosX(this.GetPosX()+1);}
       }
     }
 

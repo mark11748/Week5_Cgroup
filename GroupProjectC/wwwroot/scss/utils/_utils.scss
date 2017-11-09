@@ -37,3 +37,8 @@ $border-style: 6px solid $darker-blue;
     }
   }
 }
+
+@keyframes rotate {
+  30% {transform: rotate(30deg)};
+  70% {transform: rotate(-30deg)};
+}

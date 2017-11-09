@@ -19,8 +19,12 @@
   img {
     width: 50%;
     height: 50%;
+    animation: rotate 250ms 2;
   }
 }
+
+// .items-box img:hover {
+// }
 
 .floor-one {
   grid-template-columns: 1fr 1fr 1fr;

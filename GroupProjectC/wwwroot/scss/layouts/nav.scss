@@ -4,15 +4,11 @@ nav ul {
   display: inline;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 nav li {
   margin: 10px;
-}
-
-li:hover {
-  color: $darker-blue;
+  display: flex;
 }
 
 .fa-bars {
@@ -21,6 +17,10 @@ li:hover {
 
 .fa {
   font-size: 30px;
+}
+
+nav li:hover {
+  animation: rotate 1s;
 }
 
 @media screen and(max-width: 700px) {

@@ -24,11 +24,21 @@ footer .container {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end;
+}
+.last i:hover {
+  color: $body-color;
+  transform: rotate(30deg);
+  font-size: 50px;
 }
 
 .footer-column h3 {
   font-size: 24px;
   color: $body-color;
+}
+
+.footer-column p {
+  font-size: 16px;
+  font-style: italic;
 }

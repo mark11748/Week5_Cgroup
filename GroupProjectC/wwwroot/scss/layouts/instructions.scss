@@ -19,7 +19,7 @@
 
 .instructions {
   display: none;
-  height: 20vh;
+  height: 100%;
   border: $border-style;
 }
 
@@ -27,10 +27,17 @@
   align-items: center;
   display: flex;
   justify-content: flex-start;
+  img {
+    border: $border-style;
+  }
+  p {
+    font-size: 24px;
+    color: $darker-blue;
+  }
 }
 
 .instructions img {
-  width: 30%;
+  width: 80vw;
 }
 
 .instruction-link h3 {

@@ -9,7 +9,7 @@
 
 .items-box {
   margin-left: 15px;
-  border: $border-style;
+  // border: $border-style;
   margin-bottom: 40px;
   width: 50%;
   display: flex;
@@ -19,7 +19,12 @@
   img {
     width: 50%;
     height: 50%;
+    animation: rotate 250ms 1 200ms;
   }
+}
+
+.items-box img:hover {
+  transform: rotate(30deg);
 }
 
 .floor-one {

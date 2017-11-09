@@ -2,6 +2,11 @@
 @font-face {
   font-family: 'Fink-Roman';
   src: url("../fonts/FinkBold.ttf"); }
+@keyframes rotate {
+  30% {
+    transform: rotate(30deg); }
+  70% {
+    transform: rotate(-30deg); } }
 /* For testing only */
 /* End for testing */
 *, *::before, *::after {
@@ -61,12 +66,21 @@ footer .container {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-end; }
+
+.last i:hover {
+  color: rgba(183, 195, 210, 0.6);
+  transform: rotate(30deg);
+  font-size: 50px; }
 
 .footer-column h3 {
   font-size: 24px;
   color: rgba(183, 195, 210, 0.6); }
+
+.footer-column p {
+  font-size: 16px;
+  font-style: italic; }
 
 .instruction-link {
   width: 100%;
@@ -86,16 +100,21 @@ footer .container {
 
 .instructions {
   display: none;
-  height: 20vh;
+  height: 100%;
   border: 6px solid #677585; }
 
 .instructions-body {
   align-items: center;
   display: flex;
   justify-content: flex-start; }
+  .instructions-body img {
+    border: 6px solid #677585; }
+  .instructions-body p {
+    font-size: 24px;
+    color: #677585; }
 
 .instructions img {
-  width: 30%; }
+  width: 80vw; }
 
 .instruction-link h3 {
   background-color: #677585;
@@ -111,20 +130,20 @@ nav ul {
   list-style: none;
   display: inline;
   display: flex;
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
 
 nav li {
-  margin: 10px; }
-
-li:hover {
-  color: #677585; }
+  margin: 10px;
+  display: flex; }
 
 .fa-bars {
   display: none; }
 
 .fa {
   font-size: 30px; }
+
+li:hover {
+  animation: rotate 1s; }
 
 @media screen and (max-width: 700px) {
   .banner-text {
@@ -213,7 +232,6 @@ li:hover {
 
 .items-box {
   margin-left: 15px;
-  border: 6px solid #677585;
   margin-bottom: 40px;
   width: 50%;
   display: flex;
@@ -222,7 +240,11 @@ li:hover {
   flex-wrap: wrap; }
   .items-box img {
     width: 50%;
-    height: 50%; }
+    height: 50%;
+    animation: rotate 250ms 1 200ms; }
+
+.items-box img:hover {
+  transform: rotate(30deg); }
 
 .floor-one {
   grid-template-columns: 1fr 1fr 1fr;
@@ -400,5 +422,9 @@ button {
 button:hover {
   background-color: #677585;
   color: white; }
+
+#newgamearea {
+  width: 90%;
+  max-width: 1500px; }
 
 /*# sourceMappingURL=styles.css.map */

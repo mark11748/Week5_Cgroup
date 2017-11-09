@@ -41,6 +41,30 @@ namespace GroupProjectC.Controllers
         return View();
       }
 
+      [HttpPost("/game")]
+      public ActionResult Game()
+      {
+        Cell cell1 = new Cell("CellA", "test description",
+                              new Border(1),new Border(1),
+                              new Border(1),new Border(1) )
+
+        Cell cell2 = cell1.CopyOf();
+        Cell cell3 = cell1.CopyOf();
+        Cell cell4 = cell1.CopyOf();
+        Cell cell5 = cell1.CopyOf();
+
+        List<List<Cell>> FirstRoom = new List<List<Cell>> {{cell2,cell3},
+                                                          {cell4,cell5}};
+        Locale lobby = new Locale("Lobby"); //declare a room named "Lobby"
+        lobby.SetCells(FirstRoom); //define the room; set its cell grid
+
+        GAMEBOARD.AddMapToWorld( new List<List<Locale>>() ) //Add a floor
+        lobby.AddToWorld(); //Add a room to the floor
+
+        Locale
+        return View();
+      }
+
       [HttpGet("/save")]
       public ActionResult Save()
       {

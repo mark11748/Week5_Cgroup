@@ -41,6 +41,9 @@
   height: 40vh;
   border: $border-style;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .gridboard {

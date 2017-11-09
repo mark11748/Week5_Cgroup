@@ -1,5 +1,28 @@
 .game-area h2{
   text-align: center;
   color: $red-text;
+}
 
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 20%;
+  border: 0;
+}
+
+input {
+width: 60%;
+font-size: 20px;
+}
+
+button {
+  width: 15%;
+  font-size: 20px;
+  border: 0;
+}
+
+button:hover {
+  background-color: $darker-blue;
+  color: white;
 }

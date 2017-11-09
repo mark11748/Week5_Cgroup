@@ -3,7 +3,7 @@
   grid-gap: 0.3vw;
   width: 50%;
   height: 100%;
-  border: $border-style;
+  // border: $border-style;
   margin-bottom: 40px;
 }
 
@@ -12,16 +12,19 @@
   border: $border-style;
   margin-bottom: 40px;
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.floor-one, .floor-two {
+.floor-one {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: 10vw 10vw 10vw;
   }
-
-.game-grid > div {
-  border: 1px solid black;
-}
 
 .one {
   @include grid(1,1);
@@ -29,14 +32,17 @@
 
 .two {
   @include grid(2,1);
-}
+  @include controlers;
+  }
 
 .three {
   @include grid(3,1);
+
 }
 
 .four {
   @include grid(1,2);
+  @include controlers;
 }
 
 .five {
@@ -45,6 +51,7 @@
 
 .six {
   @include grid(3,2);
+  @include controlers;
 }
 
 .seven {
@@ -53,35 +60,36 @@
 
 .eight {
   @include grid(2,3);
+  @include controlers;
 }
 
 .nine {
   @include grid(3,3);
 }
 
-.floor-three {
-  grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 10vw 10vw;
-  width: 50%;
-  border: $border-style;
-}
-
-.one-three {
-  @include grid(1,1);
-}
-
-.two-three {
-  @include grid(2,1);
-}
-
-.three-three {
-  @include grid(1,2);
-}
-
-.four-three {
-  @include grid(2,2);
-}
-
-.floor-two, .floor-three {
-  display: none;
-}
+// .floor-three {
+//   grid-template-columns: 1fr 1fr;
+//   grid-auto-rows: 10vw 10vw;
+//   width: 50%;
+//   border: $border-style;
+// }
+//
+// .one-three {
+//   @include grid(1,1);
+// }
+//
+// .two-three {
+//   @include grid(2,1);
+// }
+//
+// .three-three {
+//   @include grid(1,2);
+// }
+//
+// .four-three {
+//   @include grid(2,2);
+// }
+//
+// .floor-two, .floor-three {
+//   display: none;
+// }

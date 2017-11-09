@@ -17,3 +17,15 @@ $border-style: 6px solid $darker-blue;
   grid-column: $column / 5;
   grid-row: $row / 5;
 }
+
+@mixin controlers {
+  background-color: $border-style;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  button {
+    border: none;
+    background-color: none;
+    color: white;
+  }
+}

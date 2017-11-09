@@ -26,8 +26,8 @@
   position: relative;
   width: 40vw;
   height: 40%;
-
 }
+
 .play-banner h2 {
   position: absolute;
   align-self: center;
@@ -49,6 +49,10 @@
       text-shadow: 2px 2px $darker-blue;
     }
   }
+
+  // #keycard {
+  //   width: 100%;
+  // }
 
 @media screen and(max-width: 900px) {
 

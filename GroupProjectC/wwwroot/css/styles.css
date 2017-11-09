@@ -228,12 +228,10 @@ li:hover {
   grid-gap: 0.3vw;
   width: 50%;
   height: 100%;
-  border: 6px solid #677585;
   margin-bottom: 40px; }
 
 .items-box {
   margin-left: 15px;
-  border: 6px solid #677585;
   margin-bottom: 40px;
   width: 50%;
   display: flex;

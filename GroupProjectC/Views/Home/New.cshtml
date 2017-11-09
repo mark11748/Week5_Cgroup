@@ -8,8 +8,6 @@
   <nav>
     <i class="fa fa-bars" aria-hidden="true"></i>
     <ul>
-      <li><i class="fa fa-music" aria-hidden="true"></i></li>
-      <li><i class="fa fa-volume-up" aria-hidden="true"></i></li>
       <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></li>
     </ul>
   </nav>
@@ -18,21 +16,21 @@
 
   <div class="hero">
 
-    <div class="game-area">
+    <div class="game-area" id="newgamearea">
       <h2>Enter New Player Details:</h2>
       <form action="/newgame" method="post" >
         <input type="text" name="player-name" placeholder="Player's Name Here">
-        <button type="submit">Submit</button>
+        <button type="submit">Play!</button>
       </form>
     </div>
     <div class="play-banner">
-      <a href="Game">
+      <a href="#">
         <h2>Play Game</h2>
         <img src="/img/sticky-note.png" alt="sticky-note">
       </a>
     </div>
     <div class="play-banner">
-      <a href="Save">
+      <a href="#">
         <h2>Load Previous Game</h2>
         <img src="/img/sticky-note.png" alt="sticky-note">
       </a>

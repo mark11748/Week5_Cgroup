@@ -6,12 +6,12 @@ namespace GroupProjectC.Models
 {
   public class Item
   {
-    private string _name;
-    private string _description;
-    private int    _posX;
-    private int    _posY;
-    private int    _ownedBy; //0=none, 1=player, 2=cell
-    private object _owner;   //this is either the cell it is in or a reference to the player atm
+    protected string _name;
+    protected string _description;
+    protected int    _posX;
+    protected int    _posY;
+    protected int    _ownedBy; //0=none, 1=player, 2=cell
+    protected object _owner;   //this is either the cell it is in or a reference to the player atm
 
     // private int?   _lockId;     //optional property
     // private bool   _hidden;

@@ -1,3 +1,4 @@
+@using GroupProjectC.Models;
 @{
   Layout = "_Layout";
 }
@@ -42,6 +43,10 @@
 
         <!-- big box at top of screen, meant to display information about each room (cell) the player enters. -->
         <div class="game-area">
+          <br>
+          <h4>@Model.GetRoom().GetName() , @Model.GetCell().GetName()</h4>
+          <br>
+          <p>@Model.GetCell().GetDescription()</p>
         </div>
 
         <div class="gridboard">
@@ -49,13 +54,29 @@
         <!-- "floor-two" and "floor-three" are hidden by default. "floor-one" and "floor-two" aree identical at this point, and "floor-three" is a simpe two-by-two grid" -->
           <div class="game-grid floor-one">
             <div class="one"></div>
-            <div class="two"></div>
+            <div class="two">
+              <form action="/mv_up" method="post">
+                <button type="submit" name="button">North</button>
+              </form>
+            </div>
             <div class="three"></div>
-            <div class="four"></div>
+            <div class="four">
+              <form action="/mv_lt" method="post">
+                <button type="submit" name="button">West</button>
+              </form>
+            </div>
             <div class="five"></div>
-            <div class="six"></div>
+            <div class="six">
+              <form action="/mv_rt" method="post">
+                <button type="submit" name="button">East</button>
+              </form>
+            </div>
             <div class="seven"></div>
-            <div class="eight"></div>
+            <div class="eight">
+              <form action="/mv_dn" method="post">
+                <button type="submit" name="button">South</button>
+              </form>
+            </div>
             <div class="nine"></div>
           </div>
 

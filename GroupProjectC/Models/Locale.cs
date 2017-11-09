@@ -13,7 +13,7 @@ namespace GroupProjectC.Models
 
     public Locale (string name="[PLACEHOLDER_Rm_NAME]")
     { _name  = name; }
-    public void AddRoomToArea(int area=0){_id = GAMEBOARD.AddAreaToMap(this,area);} /*renamed for clarity*/
+    public void AddRoomToArea(int area){_id = GAMEBOARD.AddAreaToMap(((Locale)this),area);} /*renamed for clarity*/
     public int  GetId(){return _id;}
 
     public void SetName(string name) {this._name=name;}

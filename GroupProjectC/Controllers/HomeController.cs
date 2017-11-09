@@ -10,23 +10,8 @@ namespace GroupProjectC.Controllers
       [HttpGet("/")]
       public ActionResult Index()
       {
-        Locale room = new Locale("lobby");
-        List<List<Cell>> cells = new List<List<Cell>>()
-        {
-          new List<Cell>(){new Cell("A1"),new Cell("A2")},
-          new List<Cell>(){new Cell("B1"),new Cell("B2")}
-        };
 
-        int x=0;
-        int y=0;
-        Interface gameDisplay = new Interface()
-        {
-          room=room,
-          cells=cells,
-          playerX=x,
-          playerY=y
-        };
-        return View("Interface", gameDisplay);
+        return View();
       }
 
       [HttpGet("/game")]
@@ -81,26 +66,46 @@ namespace GroupProjectC.Controllers
         Lobby.SetCells(FirstRoom1F); //define the room; set its cell grid
         Locale StoreRoom = new Locale("Store_Room");
         StoreRoom.SetCells(SecondRoom1F);
-
-        GAMEBOARD.AddMapToWorld( new List<Locale>() ); //Add a floor
-        Lobby.AddRoomToArea();     //Add a room(Lobby)     to the floor ; no args because 1st area is default
-        StoreRoom.AddRoomToArea(); //Add a room(StoreRoom) to the floor ; no args because 1st area is default
+        List<Locale> floor1 = new List<Locale>();
+        GAMEBOARD.AddMapToWorld(floor1); //Add a floor
+        Lobby.AddRoomToArea(0);     //Add a room(Lobby)     to the floor ; no args because 1st area is default
+        StoreRoom.AddRoomToArea(0); //Add a room(StoreRoom) to the floor ; no args because 1st area is default
 
         Player user = new Player(Request.Form["player-name"]);
         user.SetPosX(0);
         user.SetPosY(1);
 
-        return View();
+        return View("Game",user);
       }
 
       [HttpPost("/mv_up")]
-      public ActionResult MoveN(){user.MoveN(); return View();}
+      public ActionResult MoveN()
+      {
+       Player user = new Player(GAMEBOARD.playerName);
+       user.MoveN();
+       return View("Game",user);
+      }
       [HttpPost("/mv_dn")]
-      public ActionResult MoveS(){user.MoveS(); return View();}
+      public ActionResult MoveS()
+      {
+       Player user = new Player(GAMEBOARD.playerName);
+       user.MoveS();
+       return View("Game",user);
+      }
       [HttpPost("/mv_rt")]
-      public ActionResult MoveE(){user.MoveE(); return View();}
+      public ActionResult MoveE()
+      {
+       Player user = new Player(GAMEBOARD.playerName);
+       user.MoveE();
+       return View("Game",user);
+      }
       [HttpPost("/mv_lt")]
-      public ActionResult MoveW(){user.MoveW(); return View();}
+      public ActionResult MoveW()
+      {
+       Player user = new Player(GAMEBOARD.playerName);
+       user.MoveW();
+       return View("Game",user);
+      }
 
 
       [HttpGet("/save")]

@@ -32,6 +32,8 @@
 
 .two {
   @include grid(2,1);
+  width: 100%;
+  height: 100%;
   @include controlers;
   }
 
@@ -43,6 +45,8 @@
 .four {
   @include grid(1,2);
   @include controlers;
+  width: 100%;
+  height: 100%;
 }
 
 .five {
@@ -52,6 +56,8 @@
 .six {
   @include grid(3,2);
   @include controlers;
+  width: 100%;
+  height: 100%;
 }
 
 .seven {
@@ -61,6 +67,8 @@
 .eight {
   @include grid(2,3);
   @include controlers;
+  width: 100%;
+  height: 100%;
 }
 
 .nine {

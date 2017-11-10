@@ -44,25 +44,26 @@ namespace GroupProjectC.Controllers
         Cell cell4 = new Cell("Cell 1,0", "test description(1,0)",
                               new Border(0),new Border(1),
                               new Border(1),new Border(1) );
-        Cell cell5 = new Cell("Cell 1,1", "test description(1,1)", //exit to room 2
+        Cell cell5 = new Cell("Cell 1,1", "test description(1,1)",
                               new Border(1),new Border(1),
                               new Border(1),new Border(1) );
-        Cell cell6 = new Cell("Cell 1,2", "test description(1,2)",
+        Cell cell6 = new Cell("Cell 1,2", "test description(1,2)", //exit to room 2 : E
                               new Border(1),new Border(0),
-                              new Border(1),new Border(1) );
+                              new Border(1,1),new Border(1) );
         Cell cell7 = new Cell("Cell 2,0", "test description(2,0)",
                               new Border(0),new Border(1),
                               new Border(0),new Border(1) );
-        Cell cell8 = new Cell("Cell 2,1", "test description(2,1)", //exit to room 1
+        Cell cell8 = new Cell("Cell 2,1", "test description(2,1)",
                               new Border(1),new Border(1),
                               new Border(0),new Border(1) );
-        Cell cell9 = new Cell("Cell 2,2", "test description(2,2)", //elevator
+        Cell cell9 = new Cell("Cell 2,2", "test description(2,2)", //exit to room 1 : W
                               new Border(1),new Border(0),
-                              new Border(0),new Border(1) );
+                              new Border(0),new Border(1,0) );
 
 
         List<List<Cell>> FirstRoom1F  = new List<List<Cell>> {new List<Cell> {cell1,cell2,cell3},
                                                               new List<Cell> {cell4,cell5,cell6}};
+
         List<List<Cell>> SecondRoom1F = new List<List<Cell>> {new List<Cell> {cell7,cell8,cell9}};
 
         Locale Lobby = new Locale("Lobby"); //declare a room named "Lobby"

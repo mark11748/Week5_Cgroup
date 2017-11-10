@@ -61,9 +61,9 @@ namespace GroupProjectC.Models
       {
         if (this.GetCell().GetN().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetN().GetExitAreaId() > -1) //if map/area exit
+          if (this.GetCell().GetN().GetExitAreaId() > 0) //if map/area exit
           { this.SetMapId( this.GetCell().GetN().GetExitAreaId() ); }
-          if (this.GetCell().GetN().GetExitId() > -1) //if room exit
+          if (this.GetCell().GetN().GetExitId() > 0) //if room exit
           { this.SetRoomId( this.GetCell().GetN().GetExitId() ); }
         }
         this.SetPosY(this.GetPosY()-1);
@@ -80,9 +80,9 @@ namespace GroupProjectC.Models
       {
         if (this.GetCell().GetS().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetS().GetExitAreaId() > -1) //if map/area exit
+          if (this.GetCell().GetS().GetExitAreaId() > 0) //if map/area exit
           { this.SetMapId( this.GetCell().GetS().GetExitAreaId() ); }
-          if (this.GetCell().GetS().GetExitId() > -1) //if room exit
+          if (this.GetCell().GetS().GetExitId() > 0) //if room exit
           { this.SetRoomId( this.GetCell().GetS().GetExitId() ); }
         }
         this.SetPosY(this.GetPosY()+1);
@@ -99,9 +99,9 @@ namespace GroupProjectC.Models
       {
         if (this.GetCell().GetW().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetW().GetExitAreaId() > -1) //if map/area exit
+          if (this.GetCell().GetW().GetExitAreaId() > 0) //if map/area exit
           { this.SetMapId( this.GetCell().GetW().GetExitAreaId() ); }
-          if (this.GetCell().GetW().GetExitId() > -1) //if room exit
+          if (this.GetCell().GetW().GetExitId() > 0) //if room exit
           { this.SetRoomId( this.GetCell().GetW().GetExitId() ); }
         }
         this.SetPosX(this.GetPosX()-1);
@@ -118,9 +118,9 @@ namespace GroupProjectC.Models
       {
         if (this.GetCell().GetE().GetIsExit()) //if exit
         {
-          if (this.GetCell().GetE().GetExitAreaId() > -1) //if map/area exit
+          if (this.GetCell().GetE().GetExitAreaId() > 0) //if map/area exit
           { this.SetMapId( this.GetCell().GetE().GetExitAreaId() ); }
-          if (this.GetCell().GetE().GetExitId() > -1) //if room exit
+          if (this.GetCell().GetE().GetExitId() > 0) //if room exit
           { this.SetRoomId( this.GetCell().GetE().GetExitId() ); }
         }
         this.SetPosX(this.GetPosX()+1); ;
